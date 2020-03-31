@@ -8,11 +8,15 @@ const App = () => {
   const [bgColor, changeColor] = React.useState("#333")
 
   const Global = createGlobalStyle`
-    body {
+    
+  body {
       background-color: ${bgColor};
       color: white;
+      font-family: 'Lato', sans-serif;
     }
   `
+  // font-family: 'Lato', sans-serif;
+  // font-family: 'EB Garamond', serif;
 
   //don't think i'll have to use context for the styling on this, but WILL have to use it for rando chat, whether it's for styling or data.
 
@@ -20,7 +24,7 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <p onClick={() => changeColor("red" || "#333")}>hello</p>
+      <p onClick={() => changeColor("red")}>hello</p>
       <p
         onClick={() => {
           if (!experiment[iter]) {
