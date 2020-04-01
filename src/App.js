@@ -1,20 +1,15 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
-import SiteHeader from "./Header"
 import Loader from "./Loader"
-const Techs = React.lazy(() =>
+const SiteHeader = React.lazy(() =>
   Promise.all([
-    import("./Techs"),
+    import("./Header"),
     new Promise(resolve => setTimeout(resolve, 1500))
   ]).then(([moduleExports]) => moduleExports)
 )
 
-//a spinner of my face? maybe?
-//more likely something of my initials
-//or strong diagonal transitions? maybe have them animated like anything?
-//how animated do i want this to be? not too much. more restrained
-
-//don't think i'll have to use context for the styling on this, but WILL have to use it for rando chat, whether it's for styling or data.
+//spinner of my initials
+//for spinner, how about a second and a half animation of my initials spinning from blurred to sharp with a hard light blend effect. something that will pop whether on a dark or light ground
 
 //so i will probably end up doing an array of objects for each of the themes i come up with and just iterating through them, targeting by tag. yes, that's what i think
 
@@ -23,6 +18,9 @@ const Techs = React.lazy(() =>
 
 //do a docker icon and... what else?
 //nice bright grad as an option
+//options in its own component?
+//guess it wouldn't be TOO hard to figure out a theme context
+//and if i do end up doing that, then the context will connect right to the style component files
 
 const App = () => {
   const [style, changeStyle] = React.useState({
@@ -49,7 +47,6 @@ const App = () => {
   return (
     <React.Suspense fallback={<Loader />}>
       <SiteHeader style={style} changeStyle={changeStyle} />
-      <Techs />
       <Global />
     </React.Suspense>
   )
