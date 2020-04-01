@@ -1,8 +1,18 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
+import SiteHeader from "./Header"
+import Loader from "./Loader"
+const Techs = React.lazy(() =>
+  Promise.all([
+    import("./Techs"),
+    new Promise(resolve => setTimeout(resolve, 1500))
+  ]).then(([moduleExports]) => moduleExports)
+)
 
 //a spinner of my face? maybe?
+//more likely something of my initials
 //or strong diagonal transitions? maybe have them animated like anything?
+//how animated do i want this to be? not too much. more restrained
 
 //don't think i'll have to use context for the styling on this, but WILL have to use it for rando chat, whether it's for styling or data.
 
@@ -11,36 +21,37 @@ import { createGlobalStyle } from "styled-components"
 // font-family: 'Lato', sans-serif;
 // font-family: 'EB Garamond', serif;
 
-let iter = 0
-const experiment = ["first", "second", "third"]
+//do a docker icon and... what else?
+//nice bright grad as an option
 
 const App = () => {
-  const [bgColor, changeColor] = React.useState("#333")
+  const [style, changeStyle] = React.useState({
+    mainColor: "#212123",
+    secondaryColor: "#585b60",
+    textColor: "#eceff5"
+  })
 
   const Global = createGlobalStyle`
-  body {
-      background-color: ${bgColor};
-      color: white;
+    * {
+      box-sizing:border-box;
+    }
+
+    body {
+      margin:0;
+      min-height:500em;
+      width: 100vw;
+      background-color: ${style.mainColor};
+      color: ${style.textColor};
       font-family: 'Lato', sans-serif;
     }
   `
 
   return (
-    <React.Fragment>
-      <p onClick={() => changeColor("red")}>hello</p>
-      <p
-        onClick={() => {
-          if (!experiment[iter]) {
-            iter = 0
-          }
-          console.log(experiment[iter])
-          iter++
-        }}
-      >
-        test
-      </p>
+    <React.Suspense fallback={<Loader />}>
+      <SiteHeader style={style} changeStyle={changeStyle} />
+      <Techs />
       <Global />
-    </React.Fragment>
+    </React.Suspense>
   )
 }
 
