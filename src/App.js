@@ -1,6 +1,6 @@
 import React from "react"
-import { createGlobalStyle } from "styled-components"
 import Loader from "./Loader"
+import { createGlobalStyle } from "styled-components"
 const SiteHeader = React.lazy(() =>
   Promise.all([
     import("./Header"),
@@ -22,6 +22,12 @@ const SiteHeader = React.lazy(() =>
 //guess it wouldn't be TOO hard to figure out a theme context
 //and if i do end up doing that, then the context will connect right to the style component files
 
+//maybe tabs instead of one big page?
+
+//for projects, hover over the pics and it will use a transition to size up the pic to make it bigger. maybe a box shadow as well. probably do this with a transition
+
+//also, i think i'll do all the projects in a loop with things going => one way and <= and the other for rhythm
+
 const App = () => {
   const [style, changeStyle] = React.useState({
     mainColor: "#212123",
@@ -36,7 +42,7 @@ const App = () => {
 
     body {
       margin:0;
-      min-height:500em;
+      min-height:50em;
       width: 100vw;
       background-color: ${style.mainColor};
       color: ${style.textColor};
