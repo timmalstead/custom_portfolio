@@ -1,6 +1,7 @@
 import React from "react"
-import Loader from "./Loader"
+import { Provider } from "./ThemeContext"
 import { createGlobalStyle } from "styled-components"
+import Loader from "./Loader"
 const SiteHeader = React.lazy(() =>
   Promise.all([
     import("./Header"),
@@ -19,8 +20,6 @@ const SiteHeader = React.lazy(() =>
 //do a docker icon and... what else?
 //nice bright grad as an option
 //options in its own component?
-//guess it wouldn't be TOO hard to figure out a theme context
-//and if i do end up doing that, then the context will connect right to the style component files
 
 //maybe tabs instead of one big page?
 
@@ -29,10 +28,12 @@ const SiteHeader = React.lazy(() =>
 //also, i think i'll do all the projects in a loop with things going => one way and <= and the other for rhythm
 
 const App = () => {
-  const [style, changeStyle] = React.useState({
-    mainColor: "#212123",
-    secondaryColor: "#585b60",
-    textColor: "#eceff5"
+  const storage = window.localStorage
+
+  const [styles, changeStyle] = React.useState({
+    mainColor: `${storage.mainColor || "#212123"}`,
+    secondaryColor: `${storage.secondaryColor || "#585b60"}`,
+    textColor: `${storage.textColor || "#eceff5"}`
   })
 
   const Global = createGlobalStyle`
@@ -44,17 +45,19 @@ const App = () => {
       margin:0;
       min-height:50em;
       width: 100vw;
-      background-color: ${style.mainColor};
-      color: ${style.textColor};
+      background-color: ${styles.mainColor};
+      color: ${styles.textColor};
       font-family: 'Lato', sans-serif;
     }
   `
 
   return (
-    <React.Suspense fallback={<Loader />}>
-      <SiteHeader style={style} changeStyle={changeStyle} />
-      <Global />
-    </React.Suspense>
+    <Provider value={{ styles, changeStyle }}>
+      <React.Suspense fallback={<Loader />}>
+        <SiteHeader />
+        <Global />
+      </React.Suspense>
+    </Provider>
   )
 }
 

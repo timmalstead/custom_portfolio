@@ -1,28 +1,25 @@
 import React from "react"
 import * as Styled from "./style"
-import styled from "styled-components"
+import { Consumer } from "../ThemeContext"
 
-const SiteHeader = props => {
-  const { mainColor, secondaryColor } = props.style
-
-  const Header = styled.header`
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    background-color: ${mainColor};
-    border-bottom: 0.09em solid ${secondaryColor};
-  `
-
-  return (
-    <Header>
-      <Styled.Name>
-        <span>Timothy</span>
-        <span>Malstead</span>
-      </Styled.Name>
-    </Header>
-  )
-}
+const SiteHeader = () => (
+  <Consumer>
+    {props => (
+      <Styled.Header
+        style={{
+          backgroundColor: `${props.styles.mainColor}`,
+          borderBottomColor: `${props.styles.secondaryColor}`
+        }}
+      >
+        <Styled.Graphic />
+        <Styled.Name>
+          <span>Timothy</span>
+          <span>Malstead</span>
+        </Styled.Name>
+        <Styled.Icons />
+      </Styled.Header>
+    )}
+  </Consumer>
+)
 
 export default SiteHeader
