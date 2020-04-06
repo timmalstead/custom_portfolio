@@ -18,9 +18,8 @@ const Header = styled.header`
 
 const Graphic = styled.div`
   grid-area: graphic;
-  width: 30px;
-  height: 30px;
-  background-color: red;
+  width: 2.5em;
+  height: 2.5em;
 `
 
 const Name = styled.div`

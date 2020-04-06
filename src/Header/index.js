@@ -1,5 +1,6 @@
 import React from "react"
 import * as Styled from "./style"
+import Logo from "../images/logo"
 import { Context } from "../ThemeContext"
 
 const SiteHeader = () => {
@@ -11,7 +12,7 @@ const SiteHeader = () => {
         borderBottomColor: `${secondaryColor}`,
       }}
     >
-      <Styled.Graphic />
+      <Styled.Graphic>{Logo(secondaryColor)}</Styled.Graphic>
       <Styled.Name>
         <span>Timothy</span>
         <span>Malstead</span>
@@ -20,23 +21,5 @@ const SiteHeader = () => {
     </Styled.Header>
   )
 }
-//icons feature logo, projects, techs and settings
+//header still needs projects, techs , about and settings, links always accessable at top?
 export default SiteHeader
-
-// <Consumer>
-//   {props => (
-//     <Styled.Header
-//       style={{
-//         backgroundColor: `${props.styles.mainColor}`,
-//         borderBottomColor: `${props.styles.secondaryColor}`
-//       }}
-//     >
-//       <Styled.Graphic />
-//       <Styled.Name>
-//         <span>Timothy</span>
-//         <span>Malstead</span>
-//       </Styled.Name>
-//       <Styled.Icons />
-//     </Styled.Header>
-//   )}
-// </Consumer> */
