@@ -55,8 +55,8 @@ const App = () => {
     <Provider value={{ styles, changeStyle }}>
       <React.Suspense fallback={<Loader />}>
         <SiteHeader />
-        <Global />
       </React.Suspense>
+      <Global />
     </Provider>
   )
 }

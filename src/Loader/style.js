@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Holder = styled.main`
+const Animation = styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -16,23 +16,15 @@ const Holder = styled.main`
   @keyframes twirl {
     0% {
       content: "T";
-      transform: rotate3d(0, 1, 0, 0);
+      transform: rotate3d(0, 1, 0, -270deg);
     }
-    20% {
+    25% {
       content: "T";
-      transform: rotate3d(0, 1, 0, 72deg);
+      transform: rotate3d(0, 1, 0, 90deg);
     }
-    40% {
-      content: "T";
-      transform: rotate3d(0, 1, 0, 144deg);
-    }
-    60% {
+    50% {
       content: "M";
-      transform: rotate3d(0, 1, 0, 216deg);
-    }
-    80% {
-      content: "M";
-      transform: rotate3d(0, 1, 0, 288deg);
+      transform: rotate3d(0, 1, 0, 270deg);
     }
     100% {
       content: "M";
@@ -41,4 +33,4 @@ const Holder = styled.main`
   }
 `
 
-export { Holder }
+export default Animation

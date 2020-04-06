@@ -1,6 +1,6 @@
 import React from "react"
-import * as Style from "./style"
+import Animation from "./style"
 
-const Loader = () => <Style.Holder />
+const Loader = () => <Animation />
 
 export default Loader
