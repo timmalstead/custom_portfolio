@@ -5,12 +5,9 @@ import Loader from "./Loader"
 const SiteHeader = React.lazy(() =>
   Promise.all([
     import("./Header"),
-    new Promise(resolve => setTimeout(resolve, 1500))
+    new Promise((resolve) => setTimeout(resolve, 2000)),
   ]).then(([moduleExports]) => moduleExports)
 )
-
-//spinner of my initials
-//for spinner, how about a second and a half animation of my initials spinning from blurred to sharp with a hard light blend effect. something that will pop whether on a dark or light ground
 
 //so i will probably end up doing an array of objects for each of the themes i come up with and just iterating through them, targeting by tag. yes, that's what i think
 
@@ -33,7 +30,7 @@ const App = () => {
   const [styles, changeStyle] = React.useState({
     mainColor: `${storage.mainColor || "#212123"}`,
     secondaryColor: `${storage.secondaryColor || "#585b60"}`,
-    textColor: `${storage.textColor || "#eceff5"}`
+    textColor: `${storage.textColor || "#eceff5"}`,
   })
 
   const Global = createGlobalStyle`

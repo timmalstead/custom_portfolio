@@ -6,29 +6,32 @@ const Animation = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: sans-serif;
-  font-size: 5em;
 
-  ::after {
-    content: " ";
+  svg {
+    width: 10vw;
+    height: 10vh;
     animation: twirl 2s infinite;
   }
+
+  @media (max-width: 800px) {
+    svg {
+      width: 30vw;
+      height: 30vh;
+    }
+  }
+
   @keyframes twirl {
     0% {
-      content: "T";
-      transform: rotate3d(0, 1, 0, -270deg);
+      transform: rotate3d(0, 1, 0, -270deg) skewX(45deg);
     }
     25% {
-      content: "T";
-      transform: rotate3d(0, 1, 0, 90deg);
+      transform: rotate3d(0, 1, 0, 90deg) skewX(30deg);
     }
     50% {
-      content: "M";
-      transform: rotate3d(0, 1, 0, 270deg);
+      transform: rotate3d(0, 1, 0, 270deg) skewX(15deg);
     }
     100% {
-      content: "M";
-      transform: rotate3d(0, 1, 0, 360deg);
+      transform: rotate3d(0, 1, 0, 360deg) skewX(0);
     }
   }
 `
