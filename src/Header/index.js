@@ -1,6 +1,7 @@
 import React from "react"
 import * as Styled from "./style"
 import Logo from "../images/logo"
+import Links from "../Links"
 import { Context } from "../ThemeContext"
 
 const SiteHeader = () => {
@@ -17,9 +18,9 @@ const SiteHeader = () => {
         <span>Timothy</span>
         <span>Malstead</span>
       </Styled.Name>
-      <Styled.Icons />
+      <Links />
     </Styled.Header>
   )
 }
-//header still needs projects, techs , about and settings, links always accessable at top?
+//header still needs settings, links always accessable at top
 export default SiteHeader

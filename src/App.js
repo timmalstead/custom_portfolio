@@ -24,6 +24,9 @@ const SiteHeader = React.lazy(() =>
 
 //also, i think i'll do all the projects in a loop with things going => one way and <= and the other for rhythm
 
+//second drop down bar NOT available on main page, will be available on all others. projects, techs and about
+
+//also bring in your app logos from your projects
 const App = () => {
   const storage = window.localStorage
 

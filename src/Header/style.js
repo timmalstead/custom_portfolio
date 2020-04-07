@@ -40,12 +40,4 @@ const Name = styled.div`
     }
   }
 `
-//will need to make icons more responsive and sizable for smaller screens
-const Icons = styled.nav`
-  grid-area: icons;
-  width: 300px;
-  height: 30px;
-  background-color: blue;
-`
-
-export { Header, Graphic, Name, Icons }
+export { Header, Graphic, Name }
