@@ -22,5 +22,5 @@ const SiteHeader = () => {
     </Styled.Header>
   )
 }
-//header still needs settings, links always accessable at top
+//header still needs color theme component
 export default SiteHeader

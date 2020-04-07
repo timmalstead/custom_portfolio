@@ -10,6 +10,7 @@ const Icons = styled.nav`
 `
 const Icon = styled.svg`
   height: 1.5em;
+  transition-property: fill;
 `
 
 export { Icons, Icon }
