@@ -13,7 +13,7 @@ const Icons = styled.nav`
   }
 
   @media (max-width: 400px) {
-    width: 9em;
+    width: 45vw;
   }
 `
 const Icon = styled.svg`
@@ -24,7 +24,7 @@ const Icon = styled.svg`
   }
 
   @media (max-width: 400px) {
-    height: 2em;
+    width: 85%;
   }
 `
 

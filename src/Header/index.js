@@ -2,7 +2,7 @@ import React from "react"
 import * as Styled from "./style"
 import Logo from "../images/logo"
 import Links from "../Links"
-import { Context } from "../ThemeContext"
+import Context from "../ThemeContext"
 
 const SiteHeader = () => {
   const { mainColor, secondaryColor } = React.useContext(Context).styles

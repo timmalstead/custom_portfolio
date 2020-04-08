@@ -2,6 +2,8 @@ import React from "react"
 
 const Context = React.createContext()
 
-const { Provider, Consumer } = Context
+const { Provider } = Context
 
-export { Context, Provider, Consumer }
+export default Context
+
+export { Provider }
