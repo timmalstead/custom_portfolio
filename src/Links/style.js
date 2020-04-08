@@ -7,10 +7,25 @@ const Icons = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 800px) {
+    width: 12em;
+  }
+
+  @media (max-width: 400px) {
+    width: 9em;
+  }
 `
 const Icon = styled.svg`
   height: 1.5em;
-  transition-property: fill;
+
+  @media (max-width: 800px) {
+    height: 2.5em;
+  }
+
+  @media (max-width: 400px) {
+    height: 2em;
+  }
 `
 
 export { Icons, Icon }

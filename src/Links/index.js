@@ -1,18 +1,26 @@
 import React from "react"
 import * as Style from "./style"
 import fullIcons from "../images/fullSizeIcons"
+import mobileIcons from "../images/mobileIcons"
 import { Context } from "../ThemeContext"
 
 const Links = () => {
   const { textColor, contrastOne } = React.useContext(Context).styles
 
-  //will need to change initial value to a ternary when you get smaller view up
+  const initialIcons = window.innerWidth > 800 ? fullIcons : mobileIcons
 
-  const [iconsToRender, changeIcons] = React.useState(fullIcons)
+  const [iconsToRender, changeIcons] = React.useState(initialIcons)
 
-  //may need to change hoverControl once smaller icons become part of the picture
+  React.useEffect(() => {
+    const changeMobileIcons = () => {
+      window.innerWidth <= 800
+        ? changeIcons(mobileIcons)
+        : changeIcons(fullIcons)
+    }
+    window.addEventListener("resize", changeMobileIcons)
+  })
 
-  const hoverControl = fullIcons.reduce((object, icon) => {
+  const hoverControl = initialIcons.reduce((object, icon) => {
     object[icon.key] = false
     return object
   }, {})
@@ -31,7 +39,7 @@ const Links = () => {
           <Style.Icon
             viewBox={link.viewBox}
             style={{
-              fill: `${hovering[link.key] ? `${contrastOne}` : textColor}`,
+              fill: `${hovering[link.key] ? contrastOne : textColor}`,
             }}
             onMouseOver={() => changeHover({ ...hovering, [link.key]: true })}
             onMouseOut={() => changeHover({ ...hovering, [link.key]: false })}
