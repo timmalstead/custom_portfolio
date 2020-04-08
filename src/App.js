@@ -11,6 +11,7 @@ const SiteHeader = React.lazy(() =>
 // font-family: 'EB Garamond', serif;
 
 //do a docker icon and... what else?
+
 //nice bright grad as an option
 
 //for projects, hover over the pics and it will use a transition to size up the pic to make it bigger. probably do this with a transition
@@ -20,6 +21,8 @@ const SiteHeader = React.lazy(() =>
 //second drop down bar NOT available on main page, will be available on all others. projects, techs and about
 
 //also bring in your app logos from your projects
+
+//attach meta og tags to html file before you are done
 const App = () => {
   const storage = window.localStorage
 

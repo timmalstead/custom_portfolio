@@ -16,6 +16,7 @@ const Icons = styled.nav`
     width: 45vw;
   }
 `
+
 const Icon = styled.svg`
   height: 1.5em;
 
