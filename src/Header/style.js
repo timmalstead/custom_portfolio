@@ -4,6 +4,7 @@ const Header = styled.header`
   position: fixed;
   z-index: 1;
   width: 100%;
+  height: 3.5em;
   display: grid;
   grid-template-columns: 1.25% min-content 1.25% min-content auto min-content 1.25%;
   grid-template-areas: ". graphic . name . icons .";
@@ -12,6 +13,7 @@ const Header = styled.header`
   border-bottom-style: solid;
 
   @media (max-width: 800px) {
+    height: 4.5em;
     grid-template-columns: 2% min-content 2% min-content auto min-content 2%;
   }
 `
@@ -27,7 +29,7 @@ const Name = styled.div`
   display: flex;
 
   span {
-    font-size: max(1.5em, 2vw);
+    font-size: 1.75em;
     margin: 0.3em 0.3em 0.3em 0;
   }
 
@@ -36,6 +38,7 @@ const Name = styled.div`
     padding: 0.5em 0;
 
     span {
+      font-size: 1.5em;
       margin: 0;
     }
   }

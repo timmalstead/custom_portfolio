@@ -1,5 +1,13 @@
 import React from "react"
+import Footer from "./style"
+import Context from "../ThemeContext"
 
-const Footer = () => <p>hey there, i'm a footer</p>
+const date = new Date().getFullYear()
 
-export default Footer
+const SiteFooter = () => (
+  <Footer style={{ color: `${React.useContext(Context).styles.textColor}` }}>
+    Copyright &copy; Timothy Malstead 2019-{date}
+  </Footer>
+)
+
+export default SiteFooter

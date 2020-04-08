@@ -20,12 +20,12 @@ const Links = () => {
     window.addEventListener("resize", changeMobileIcons)
   })
 
-  const hoverControl = initialIcons.reduce((object, icon) => {
-    object[icon.key] = false
-    return object
-  }, {})
-
-  const [hovering, changeHover] = React.useState(hoverControl)
+  const [hovering, changeHover] = React.useState(
+    initialIcons.reduce((object, icon) => {
+      object[icon.key] = false
+      return object
+    }, {})
+  )
 
   return (
     <Style.Icons>

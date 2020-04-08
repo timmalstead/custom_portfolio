@@ -5,11 +5,11 @@ import * as Styled from "./style"
 import Context from "../ThemeContext"
 
 const SiteHeader = () => {
-  const { mainColor, secondaryColor } = React.useContext(Context).styles
+  const { headerColor, secondaryColor } = React.useContext(Context).styles
   return (
     <Styled.Header
       style={{
-        backgroundColor: `${mainColor}`,
+        backgroundColor: `${headerColor}`,
         borderBottomColor: `${secondaryColor}`,
       }}
     >
@@ -22,5 +22,4 @@ const SiteHeader = () => {
     </Styled.Header>
   )
 }
-//header still needs color theme component
 export default SiteHeader

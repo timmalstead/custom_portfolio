@@ -1,5 +1,7 @@
 import React from "react"
 import Loader from "./Loader"
+import SiteFooter from "./Footer"
+import Main from "./style"
 import { createGlobalStyle } from "styled-components"
 import { Provider } from "./ThemeContext"
 const SiteHeader = React.lazy(() =>
@@ -8,8 +10,6 @@ const SiteHeader = React.lazy(() =>
     new Promise((resolve) => setTimeout(resolve, 2000)),
   ]).then(([moduleExports]) => moduleExports)
 )
-// font-family: 'EB Garamond', serif;
-
 //do a docker icon and... what else?
 
 //nice bright grad as an option
@@ -29,6 +29,7 @@ const App = () => {
   const [styles, changeStyle] = React.useState({
     mainColor: `${storage.mainColor || "#212123"}`,
     secondaryColor: `${storage.secondaryColor || "#585b60"}`,
+    headerColor: `${storage.headerColor || "#212123"}`,
     textColor: `${storage.textColor || "#eceff5"}`,
     contrastOne: `${storage.constrastOne || "#d7d950"}`,
   })
@@ -52,6 +53,9 @@ const App = () => {
     <Provider value={{ styles, changeStyle }}>
       <React.Suspense fallback={<Loader />}>
         <SiteHeader />
+        <Main>
+          <SiteFooter />
+        </Main>
       </React.Suspense>
       <Global />
     </Provider>
