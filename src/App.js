@@ -1,7 +1,7 @@
 import React from "react"
-import { Provider } from "./ThemeContext"
-import { createGlobalStyle } from "styled-components"
 import Loader from "./Loader"
+import { createGlobalStyle } from "styled-components"
+import { Provider } from "./ThemeContext"
 const SiteHeader = React.lazy(() =>
   Promise.all([
     import("./Header"),

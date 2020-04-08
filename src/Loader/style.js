@@ -8,15 +8,15 @@ const Animation = styled.div`
   align-items: center;
 
   svg {
-    width: 10vw;
-    height: 10vh;
+    width: 4em;
+    height: 4em;
     animation: twirl 2s infinite;
   }
 
   @media (max-width: 800px) {
     svg {
-      width: 30vw;
-      height: 30vh;
+      width: 10em;
+      height: 10em;
     }
   }
 

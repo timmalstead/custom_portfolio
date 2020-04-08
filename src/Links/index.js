@@ -1,7 +1,7 @@
 import React from "react"
-import * as Style from "./style"
 import fullIcons from "../images/fullSizeIcons"
 import mobileIcons from "../images/mobileIcons"
+import * as Style from "./style"
 import Context from "../ThemeContext"
 
 const Links = () => {

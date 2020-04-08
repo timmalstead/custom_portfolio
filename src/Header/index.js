@@ -1,7 +1,7 @@
 import React from "react"
-import * as Styled from "./style"
 import Logo from "../images/logo"
 import Links from "../Links"
+import * as Styled from "./style"
 import Context from "../ThemeContext"
 
 const SiteHeader = () => {
