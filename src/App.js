@@ -16,6 +16,10 @@ const SiteHeader = React.lazy(() =>
 )
 //do a docker icon and... what else?
 
+//how to transition between components mounting?
+
+//refigure header layout, maybe a svg layout with a cool blend that is dynamically colored
+
 //nice bright grad as an option
 
 //for projects, hover over the pics and it will use a transition to size up the pic to make it bigger. probably do this with a transition
@@ -29,11 +33,12 @@ const App = () => {
   const storage = window.localStorage
 
   const [styles, changeStyle] = React.useState({
-    mainColor: `${storage.mainColor || "#212123"}`,
-    secondaryColor: `${storage.secondaryColor || "#585b60"}`,
-    headerColor: `${storage.headerColor || "#212123"}`,
-    textColor: `${storage.textColor || "#eceff5"}`,
-    contrastOne: `${storage.constrastOne || "#d7d950"}`,
+    loadAnimations: storage.loadAnimations || true,
+    mainColor: storage.mainColor || "#212123",
+    secondaryColor: storage.secondaryColor || "#585b60",
+    headerColor: storage.headerColor || "#212123",
+    textColor: storage.textColor || "#eceff5",
+    contrastOne: storage.constrastOne || "#d7d950",
   })
 
   const [headerBorder, changeHeaderBorder] = React.useState(true)

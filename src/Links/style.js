@@ -17,23 +17,29 @@ const Icons = styled.nav`
   }
 `
 
-const Icon = styled.svg`
-  position: relative;
-
-  height: 1.5em;
-  transform: translateY(0);
-  transition: transform 0.5s;
+const Icon = styled.div`
+  svg {
+    height: 1.5em;
+    transform: translateY(0);
+    transition: transform 0.5s;
+  }
 
   :hover {
-    transform: translateY(-0.5em);
+    svg {
+      transform: translateY(-0.5em);
+    }
   }
 
   @media (max-width: 800px) {
-    height: 2.5em;
+    svg {
+      height: 2.5em;
+    }
   }
 
   @media (max-width: 400px) {
-    width: 85%;
+    svg {
+      width: 85%;
+    }
   }
 `
 

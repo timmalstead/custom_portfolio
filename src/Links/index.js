@@ -36,15 +36,17 @@ const Links = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Style.Icon
-            viewBox={link.viewBox}
-            style={{
-              fill: hovering[link.key] ? contrastOne : textColor,
-            }}
-            onMouseOver={() => changeHover({ ...hovering, [link.key]: true })}
-            onMouseOut={() => changeHover({ ...hovering, [link.key]: false })}
-          >
-            {link.path}
+          <Style.Icon>
+            <svg
+              viewBox={link.viewBox}
+              style={{
+                fill: hovering[link.key] ? contrastOne : textColor,
+              }}
+              onMouseOver={() => changeHover({ ...hovering, [link.key]: true })}
+              onMouseOut={() => changeHover({ ...hovering, [link.key]: false })}
+            >
+              {link.path}
+            </svg>
           </Style.Icon>
         </a>
       ))}
