@@ -1,11 +1,11 @@
 import React from "react"
 import Loader from "./Loader"
 import SiteFooter from "./Footer"
-import Main from "./style"
 import Splash from "./SplashPage"
-import Projects from "./Projects"
-import Techs from "./Techs"
+import NavBar from "./NavBar"
+import NavRoutes from "./SiteRoutes"
 import * as Router from "react-router-dom"
+import Main from "./style"
 import { createGlobalStyle } from "styled-components"
 import { Provider } from "./ThemeContext"
 const SiteHeader = React.lazy(() =>
@@ -22,8 +22,6 @@ const SiteHeader = React.lazy(() =>
 
 //do all the projects in a loop with things going => and <= for rhythm
 
-//second drop down bar NOT available on main page, will be available on all others. projects, techs and about
-
 //also bring in your app logos from your projects
 
 //attach meta og tags to html file before you are done
@@ -38,6 +36,8 @@ const App = () => {
     contrastOne: `${storage.constrastOne || "#d7d950"}`,
   })
 
+  const [headerBorder, changeHeaderBorder] = React.useState(true)
+
   const Global = createGlobalStyle`
     * {
       box-sizing:border-box;
@@ -45,7 +45,7 @@ const App = () => {
 
     body {
       margin:0;
-      min-height:50em;
+      /* min-height:48em; */
       width: 100vw;
       background-color: ${styles.mainColor};
       color: ${styles.textColor};
@@ -56,22 +56,23 @@ const App = () => {
   return (
     <Provider value={{ styles, changeStyle }}>
       <React.Suspense fallback={<Loader />}>
-        <SiteHeader />
+        <SiteHeader headerBorder={headerBorder} />
         <Main>
           <Router.Switch>
             <Router.Route exact path="/" render={() => <Splash />} />
-            <Router.Route
-              exact
-              path="/projects"
-              render={() => (
-                <div>
-                  <Projects />
-                  remember to put a sub bar here, will you need to adjust the
-                  top the Main component?
-                </div>
-              )}
-            />
-            <Router.Route exact path="/techs" render={() => <Techs />} />
+            {NavRoutes.map((route) => (
+              <Router.Route
+                key={route.key}
+                exact
+                path={route.path}
+                render={() => (
+                  <React.Fragment>
+                    <NavBar changeHeaderBorder={changeHeaderBorder} />
+                    {route.comp}
+                  </React.Fragment>
+                )}
+              />
+            ))}
           </Router.Switch>
           <SiteFooter />
         </Main>

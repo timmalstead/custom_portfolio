@@ -39,7 +39,7 @@ const Links = () => {
           <Style.Icon
             viewBox={link.viewBox}
             style={{
-              fill: `${hovering[link.key] ? contrastOne : textColor}`,
+              fill: hovering[link.key] ? contrastOne : textColor,
             }}
             onMouseOver={() => changeHover({ ...hovering, [link.key]: true })}
             onMouseOut={() => changeHover({ ...hovering, [link.key]: false })}

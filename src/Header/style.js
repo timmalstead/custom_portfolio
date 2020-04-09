@@ -11,6 +11,8 @@ const Header = styled.header`
   align-items: center;
   border-bottom-width: 0.09em;
   border-bottom-style: solid;
+  padding: 0;
+  transition: padding 0.5s ease-out;
 
   @media (max-width: 800px) {
     height: 4.5em;

@@ -18,6 +18,8 @@ const Icons = styled.nav`
 `
 
 const Icon = styled.svg`
+  position: relative;
+
   height: 1.5em;
   transform: translateY(0);
   transition: transform 0.5s;

@@ -5,13 +5,16 @@ import { Link } from "react-router-dom"
 import * as Styled from "./style"
 import Context from "../ThemeContext"
 
-const SiteHeader = () => {
+const SiteHeader = (props) => {
   const { headerColor, secondaryColor } = React.useContext(Context).styles
+  const { headerBorder } = props
+
   return (
     <Styled.Header
       style={{
-        backgroundColor: `${headerColor}`,
-        borderBottomColor: `${secondaryColor}`,
+        backgroundColor: headerColor,
+        borderBottomColor: headerBorder ? secondaryColor : "transparent",
+        padding: headerBorder ? "initial" : ".625em 0 0 0",
       }}
     >
       <Styled.Graphic>

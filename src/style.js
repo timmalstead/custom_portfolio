@@ -2,16 +2,15 @@ import styled from "styled-components"
 
 const Main = styled.main`
   width: 100%;
-  position: fixed;
+  padding: 3.5em 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 46.5em;
-  top: 3.5em;
+  justify-content: space-between;
+  /* min-height: 48em; */
 
   @media (max-width: 800px) {
-    min-height: 45.5em;
-    top: 4.5em;
+    padding: 4.5em 0 0 0;
   }
 `
 
