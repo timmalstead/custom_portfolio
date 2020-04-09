@@ -1,6 +1,7 @@
 import React from "react"
 import Logo from "../images/logo"
 import Links from "../Links"
+import { Link } from "react-router-dom"
 import * as Styled from "./style"
 import Context from "../ThemeContext"
 
@@ -13,7 +14,12 @@ const SiteHeader = () => {
         borderBottomColor: `${secondaryColor}`,
       }}
     >
-      <Styled.Graphic>{Logo(secondaryColor)}</Styled.Graphic>
+      <Styled.Graphic>
+        <Link exact to="/">
+          {Logo(secondaryColor)}
+        </Link>
+      </Styled.Graphic>
+
       <Styled.Name>
         <span>Timothy</span>
         <span>Malstead</span>

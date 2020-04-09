@@ -2,6 +2,10 @@ import React from "react"
 import Loader from "./Loader"
 import SiteFooter from "./Footer"
 import Main from "./style"
+import Splash from "./SplashPage"
+import Projects from "./Projects"
+import Techs from "./Techs"
+import * as Router from "react-router-dom"
 import { createGlobalStyle } from "styled-components"
 import { Provider } from "./ThemeContext"
 const SiteHeader = React.lazy(() =>
@@ -54,6 +58,21 @@ const App = () => {
       <React.Suspense fallback={<Loader />}>
         <SiteHeader />
         <Main>
+          <Router.Switch>
+            <Router.Route exact path="/" render={() => <Splash />} />
+            <Router.Route
+              exact
+              path="/projects"
+              render={() => (
+                <div>
+                  <Projects />
+                  remember to put a sub bar here, will you need to adjust the
+                  top the Main component?
+                </div>
+              )}
+            />
+            <Router.Route exact path="/techs" render={() => <Techs />} />
+          </Router.Switch>
           <SiteFooter />
         </Main>
       </React.Suspense>

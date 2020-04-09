@@ -22,6 +22,16 @@ const Graphic = styled.div`
   grid-area: graphic;
   width: 2.5em;
   height: 2.5em;
+  overflow: hidden;
+
+  svg {
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+
+  svg:hover {
+    transform: scale(1.2);
+  }
 `
 
 const Name = styled.div`
