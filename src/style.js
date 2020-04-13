@@ -9,7 +9,7 @@ const Main = styled.main`
   justify-content: space-between;
   /* min-height: 48em; */
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     padding: 4.5em 0 0 0;
   }
 `

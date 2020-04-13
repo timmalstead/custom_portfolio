@@ -13,7 +13,7 @@ const Animation = styled.div`
     animation: twirl 2s infinite;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     svg {
       width: 10em;
       height: 10em;

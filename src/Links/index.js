@@ -7,13 +7,13 @@ import Context from "../ThemeContext"
 const Links = () => {
   const { textColor, contrastOne } = React.useContext(Context).styles
 
-  const initialIcons = window.innerWidth > 800 ? fullIcons : mobileIcons
+  const initialIcons = window.innerWidth > 850 ? fullIcons : mobileIcons
 
   const [iconsToRender, changeIcons] = React.useState(initialIcons)
 
   React.useEffect(() => {
     const changeMobileIcons = () => {
-      window.innerWidth <= 800
+      window.innerWidth <= 850
         ? changeIcons(mobileIcons)
         : changeIcons(fullIcons)
     }

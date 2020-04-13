@@ -4,11 +4,11 @@ import Techs from "./Techs"
 
 const NavRoutes = [
   {
-    key: "pro",
+    key: "Projects",
     path: "/projects",
     comp: <Projects />,
   },
-  { key: "tec", path: "/techs", comp: <Techs /> },
+  { key: "Techs", path: "/techs", comp: <Techs /> },
 ]
 
 export default NavRoutes

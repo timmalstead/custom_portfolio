@@ -28,6 +28,9 @@ const SiteHeader = React.lazy(() =>
 
 //also bring in your app logos from your projects
 
+//figure out what you want to have be dynamic in the theme. probably backgrounds,images,,
+//colors of course and see if you can do dynamic favicons
+
 //attach meta og tags to html file before you are done
 const App = () => {
   const storage = window.localStorage

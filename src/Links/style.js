@@ -8,7 +8,7 @@ const Icons = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     width: 12em;
   }
 
@@ -30,7 +30,7 @@ const Icon = styled.div`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     svg {
       height: 2.5em;
     }

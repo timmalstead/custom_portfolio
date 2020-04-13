@@ -6,7 +6,9 @@ import * as Styled from "./style"
 import Context from "../ThemeContext"
 
 const SiteHeader = (props) => {
-  const { headerColor, secondaryColor } = React.useContext(Context).styles
+  const { headerColor, secondaryColor, textColor } = React.useContext(
+    Context
+  ).styles
   const { headerBorder } = props
 
   return (
@@ -17,17 +19,15 @@ const SiteHeader = (props) => {
         padding: headerBorder ? "initial" : ".625em 0 0 0",
       }}
     >
-      <Styled.Graphic>
-        <Link exact to="/">
-          {Logo(secondaryColor)}
-        </Link>
+      <Styled.Graphic as={Link} exact to="/">
+        {Logo(secondaryColor)}
       </Styled.Graphic>
-
-      <Styled.Name>
+      <Styled.Name as={Link} exact to="/" style={{ color: textColor }}>
         <span>Timothy</span>
         <span>Malstead</span>
       </Styled.Name>
       <Links />
+      <Styled.Themes>Th</Styled.Themes>
     </Styled.Header>
   )
 }

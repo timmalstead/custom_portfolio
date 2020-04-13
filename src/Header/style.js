@@ -6,17 +6,18 @@ const Header = styled.header`
   width: 100%;
   height: 3.5em;
   display: grid;
-  grid-template-columns: 1.25% min-content 1.25% min-content auto min-content 1.25%;
-  grid-template-areas: ". graphic . name . icons .";
+  grid-template-columns: 3% min-content 1% min-content auto min-content 3% min-content 3%;
+  grid-template-areas: ". graphic . name . icons . themes .";
   align-items: center;
   border-bottom-width: 0.09em;
   border-bottom-style: solid;
   padding: 0;
   transition: padding 0.5s ease-out;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     height: 4.5em;
-    grid-template-columns: 2% min-content 2% min-content auto min-content 2%;
+    grid-template-areas: ". themes . name . icons .";
+    grid-template-columns: 4% min-content auto min-content auto min-content 4%;
   }
 `
 
@@ -34,25 +35,44 @@ const Graphic = styled.div`
   svg:hover {
     transform: scale(1.2);
   }
+  @media (max-width: 850px) {
+    display: none;
+  }
 `
 
 const Name = styled.div`
   grid-area: name;
   display: flex;
+  text-decoration: none;
 
   span {
     font-size: 1.75em;
     margin: 0.3em 0.3em 0.3em 0;
   }
 
-  @media (max-width: 800px) {
-    flex-direction: column;
+  @media (max-width: 850px) {
     padding: 0.5em 0;
 
     span {
-      font-size: 1.5em;
-      margin: 0;
+      margin: 0 0.2em 0 0;
+    }
+  }
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+
+    span {
+      font-size: min(6vw, 1.5em);
     }
   }
 `
-export { Header, Graphic, Name }
+
+const Themes = styled.div`
+  grid-area: themes;
+  height: 2.5em;
+  width: 2.5em;
+  background-color: red;
+`
+//have to figure out sizing for themes better once i have a graphic
+
+export { Header, Graphic, Name, Themes }
