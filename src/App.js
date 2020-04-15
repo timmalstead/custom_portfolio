@@ -32,6 +32,8 @@ const SiteHeader = React.lazy(() =>
 
 //how to transition between components mounting?
 //attach meta og tags to html file before you are done
+
+//so the order is techs, projects, creative works, transitions,finish nav bar themes including custom themes, og tags
 const App = () => {
   const storage = window.localStorage
 
