@@ -18,8 +18,6 @@ const SiteHeader = React.lazy(() =>
 
 //how to transition between components mounting?
 
-//refigure header layout, maybe a svg layout with a cool blend that is dynamically colored
-
 //nice bright grad as an option
 
 //for projects, hover over the pics and it will use a transition to size up the pic to make it bigger. probably do this with a transition
@@ -28,7 +26,8 @@ const SiteHeader = React.lazy(() =>
 
 //also bring in your app logos from your projects
 
-//figure out what you want to have be dynamic in the theme. probably backgrounds,images,,
+//figure out what you want to have be dynamic in the theme. probably backgrounds,images,
+
 //colors of course and see if you can do dynamic favicons
 
 //attach meta og tags to html file before you are done

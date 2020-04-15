@@ -67,12 +67,4 @@ const Name = styled.div`
   }
 `
 
-const Themes = styled.div`
-  grid-area: themes;
-  height: 2.5em;
-  width: 2.5em;
-  background-color: red;
-`
-//have to figure out sizing for themes better once i have a graphic
-
-export { Header, Graphic, Name, Themes }
+export { Header, Graphic, Name }
