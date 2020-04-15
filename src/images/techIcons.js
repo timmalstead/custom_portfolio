@@ -139,7 +139,7 @@ const TechIcons = [
     ),
   },
   {
-    name: "JavaScript ES6",
+    name: "JavaScript",
     path: (
       <g>
         <path
@@ -1421,7 +1421,7 @@ const TechIcons = [
     ),
   },
   {
-    name: "Adobe Creative Cloud",
+    name: "Adobe CC",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1510,7 +1510,7 @@ const TechIcons = [
     ),
   },
   {
-    name: "Adobe Photoshop",
+    name: "Photoshop",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1552,7 +1552,7 @@ const TechIcons = [
     ),
   },
   {
-    name: "Adobe Illustrator",
+    name: "Illustrator",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />

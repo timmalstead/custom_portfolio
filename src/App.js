@@ -14,10 +14,6 @@ const SiteHeader = React.lazy(() =>
     new Promise((resolve) => setTimeout(resolve, 2000)),
   ]).then(([moduleExports]) => moduleExports)
 )
-//TECHS
-//do tech list, and add a docker icon and whatever else is needed.
-//and do a redux icon once you've done a little project with that
-
 //PROJECTS
 //hover over the pics and it will use a transition to size up the pic to make it bigger. probably do this with a transition in color and blending too
 //do all the projects in a loop with things going => and <= for rhythm
@@ -33,7 +29,7 @@ const SiteHeader = React.lazy(() =>
 //how to transition between components mounting?
 //attach meta og tags to html file before you are done
 
-//so the order is techs, projects, creative works, transitions,finish nav bar themes including custom themes, og tags
+//so the order is projects, creative works, transitions, splash,finish nav bar themes including custom themes, og tags, figure out footer spacing, and add support for hi def screens too
 const App = () => {
   const storage = window.localStorage
 

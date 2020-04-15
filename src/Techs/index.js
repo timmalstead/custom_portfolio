@@ -1,14 +1,16 @@
 import React from "react"
 import TechIcons from "../images/techIcons"
+import * as Style from "./style"
 
-const Techs = () =>
-  TechIcons.map((icon) => (
-    <React.Fragment key={icon.name}>
-      <svg viewBox="0 0 51.01 72" width="51.01px" height="72px">
-        {icon.path}
-      </svg>
-      <span>{icon.name}</span>
-    </React.Fragment>
-  ))
+const Techs = () => (
+  <Style.TechHolder>
+    {TechIcons.map((icon) => (
+      <Style.IconHolder key={icon.name}>
+        <svg viewBox="0 0 51.01 72">{icon.path}</svg>
+        <span>{icon.name}</span>
+      </Style.IconHolder>
+    ))}
+  </Style.TechHolder>
+)
 
 export default Techs
