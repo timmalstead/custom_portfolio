@@ -12,14 +12,13 @@ const Links = () => {
   const [iconsToRender, changeIcons] = React.useState(initialIcons)
 
   React.useEffect(() => {
-    // const changeMobileIcons = () => {
-    //   window.innerWidth <= 850
-    //     ? changeIcons(mobileIcons)
-    //     : changeIcons(fullIcons)
-    // }
-    // window.addEventListener("resize", changeMobileIcons)
-    console.log("hi tim")
-  }, [textColor])
+    const changeMobileIcons = () => {
+      window.innerWidth <= 850
+        ? changeIcons(mobileIcons)
+        : changeIcons(fullIcons)
+    }
+    window.addEventListener("resize", changeMobileIcons)
+  })
 
   const [hovering, changeHover] = React.useState(
     initialIcons.reduce((object, icon) => {
