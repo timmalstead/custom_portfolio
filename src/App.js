@@ -14,6 +14,9 @@ const SiteHeader = React.lazy(() =>
     new Promise((resolve) => setTimeout(resolve, 2000)),
   ]).then(([moduleExports]) => moduleExports)
 )
+//TECHS
+//add popups on hover for techs
+
 //PROJECTS
 //hover over the pics and it will use a transition to size up the pic to make it bigger. probably do this with a transition in color and blending too
 //do all the projects in a loop with things going => and <= for rhythm
@@ -29,7 +32,7 @@ const SiteHeader = React.lazy(() =>
 //how to transition between components mounting?
 //attach meta og tags to html file before you are done
 
-//so the order is projects, creative works, transitions, splash,finish nav bar themes including custom themes, og tags, figure out footer spacing, and add support for hi def screens too
+//so the order is tech hover popups, projects, creative works, transitions, splash,finish nav bar themes including custom themes, og tags, figure out footer spacing, and add support for hi def screens too
 const App = () => {
   const storage = window.localStorage
 

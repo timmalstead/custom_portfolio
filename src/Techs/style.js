@@ -3,15 +3,12 @@ import styled from "styled-components"
 const TechHolder = styled.div`
   padding: 1em 0;
   margin: 1.25em 0 0 0;
-  width: 90%;
+  width: 98%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  @media (max-width: 800px) {
-    width: 95%;
-  }
 `
+
 const IconHolder = styled.div`
   margin: 0.5em;
   width: 8em;
