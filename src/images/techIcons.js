@@ -1535,7 +1535,7 @@ const TechIcons = [
   {
     name: "XD",
     info:
-      "Adobe XD is a vector-based user experience design tool used to create wireframes clickable prototypes for mobile and web applications.",
+      "Adobe XD is a vector-based user experience design tool used to create wireframes and clickable prototypes for mobile and web applications.",
     url: "https://www.adobe.com/products/xd.html",
     path: (
       <g>

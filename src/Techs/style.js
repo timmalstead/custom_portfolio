@@ -46,7 +46,7 @@ const IconHolder = styled.div`
 const PopUp = styled.div`
   position: absolute;
   flex-direction: column;
-  top: 3em;
+  top: 5em;
   left: 2em;
   z-index: 2;
 
@@ -83,7 +83,7 @@ const PopUp = styled.div`
   }
 
   @media (max-width: 800px) {
-    top: 2.5em;
+    top: 3.5em;
     left: 0.5em;
   }
 `

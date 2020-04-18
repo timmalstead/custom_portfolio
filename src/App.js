@@ -17,6 +17,9 @@ const SiteHeader = React.lazy(() =>
 //TECHS
 //review this one before publishing
 
+//SPLASH
+//have a couple pseudo-randomly determined layouts
+
 //ABOUT
 //do an about
 
@@ -35,7 +38,7 @@ const SiteHeader = React.lazy(() =>
 //how to transition between components mounting?
 //attach meta og tags to html file before you are done
 
-//so the order is tech hover popups, projects, creative works, transitions, splash,finish nav bar themes including custom themes, og tags, figure out footer spacing, and add support for hi def screens too
+//so the order is about projects, creative works, transitions, splash,finish nav bar themes including custom themes, og tags, figure out footer spacing, and add support for hi def screens too
 const App = () => {
   const storage = window.localStorage
 
