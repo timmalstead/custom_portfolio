@@ -10,6 +10,7 @@ const TechHolder = styled.div`
 `
 
 const IconHolder = styled.div`
+  position: relative;
   margin: 0.5em;
   width: 8em;
   height: 8em;
@@ -42,4 +43,49 @@ const IconHolder = styled.div`
   }
 `
 
-export { TechHolder, IconHolder }
+const PopUp = styled.div`
+  position: absolute;
+  flex-direction: column;
+  top: 3em;
+  left: 2em;
+  z-index: 2;
+
+  div {
+    position: relative;
+    left: 1em;
+    height: 0;
+    width: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom-width: 1em;
+    border-bottom-style: solid;
+  }
+
+  article {
+    position: relative;
+    font-family: "EB Garamond", serif;
+    padding: 1em;
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10em;
+    width: 15em;
+    border-radius: 0.5em;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      margin: 0.5em 0 0 0;
+    }
+  }
+
+  @media (max-width: 800px) {
+    top: 2.5em;
+    left: 0.5em;
+  }
+`
+
+export { TechHolder, IconHolder, PopUp }

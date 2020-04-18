@@ -3,6 +3,9 @@ import React from "react"
 const TechIcons = [
   {
     name: "HTML5",
+    info:
+      "HTML5 is the markup language used for structuring and presenting content on the World Wide Web.",
+    url: "https://html.spec.whatwg.org/multipage/",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.122" height="72" />
@@ -16,12 +19,12 @@ const TechIcons = [
         />
         <polygon
           fill="#EBEBEB"
-          points="25.504,37.718 17.054,37.718 16.47,31.179 25.504,31.179 25.504,24.793 25.481,24.793 
+          points="25.504,37.718 17.054,37.718 16.47,31.179 25.504,31.179 25.504,24.793 25.481,24.793
       9.491,24.793 9.644,26.506 11.213,44.104 25.504,44.104 	"
         />
         <polygon
           fill="#EBEBEB"
-          points="25.504,54.303 25.476,54.311 18.364,52.391 17.909,47.297 14.454,47.297 11.499,47.297 
+          points="25.504,54.303 25.476,54.311 18.364,52.391 17.909,47.297 14.454,47.297 11.499,47.297
       12.394,57.324 25.476,60.955 25.504,60.947 	"
         />
         <path
@@ -43,12 +46,12 @@ const TechIcons = [
         />
         <polygon
           fill="#FFFFFF"
-          points="25.481,37.718 25.481,44.104 33.347,44.104 32.604,52.386 25.481,54.309 25.481,60.951 
+          points="25.481,37.718 25.481,44.104 33.347,44.104 32.604,52.386 25.481,54.309 25.481,60.951
       38.573,57.324 38.67,56.244 40.17,39.434 40.325,37.718 38.606,37.718 	"
         />
         <polygon
           fill="#FFFFFF"
-          points="25.481,24.793 25.481,28.759 25.481,31.163 25.481,31.179 40.888,31.179 40.888,31.179 
+          points="25.481,24.793 25.481,28.759 25.481,31.163 25.481,31.179 40.888,31.179 40.888,31.179
       40.905,31.179 41.035,29.744 41.325,26.506 41.479,24.793 	"
         />
       </g>
@@ -56,6 +59,9 @@ const TechIcons = [
   },
   {
     name: "CSS3",
+    info:
+      "CSS3 is a style sheet language used for describing the presentation of a document written in a markup language.",
+    url: "https://www.w3.org/Style/CSS/",
     path: (
       <g>
         <path
@@ -77,7 +83,7 @@ const TechIcons = [
         />
         <polygon
           fill="#2965F1"
-          points="40.174,37.71 40.021,39.416 38.535,56.141 38.44,57.214 25.504,60.818 25.504,67.413 42.211,62.756 
+          points="40.174,37.71 40.021,39.416 38.535,56.141 38.44,57.214 25.504,60.818 25.504,67.413 42.211,62.756
       46.142,18.497 25.504,18.497 25.504,24.85 41.315,24.85 "
         />
         <polygon
@@ -94,27 +100,27 @@ const TechIcons = [
         />
         <polygon
           fill="#EBEBEB"
-          points="25.483,54.215 25.476,54.217 18.437,52.307 17.987,47.239 14.567,47.239 11.642,47.239 
+          points="25.483,54.215 25.476,54.217 18.437,52.307 17.987,47.239 14.567,47.239 11.642,47.239
       12.526,57.214 25.476,60.828 25.504,60.818 25.483,60.824 "
         />
         <polygon
           fill="#EBEBEB"
-          points="19.797,6.62 15.343,6.62 15.343,3.401 19.797,3.401 19.797,0.184 12.142,0.184 12.142,9.837 
+          points="19.797,6.62 15.343,6.62 15.343,3.401 19.797,3.401 19.797,0.184 12.142,0.184 12.142,9.837
       19.797,9.837 "
         />
         <polygon
           fill="#EBEBEB"
-          points="28.983,3.541 24.53,3.541 24.53,2.981 28.983,2.981 28.983,0.184 21.329,0.184 21.329,6.479 
+          points="28.983,3.541 24.53,3.541 24.53,2.981 28.983,2.981 28.983,0.184 21.329,0.184 21.329,6.479
       25.782,6.479 25.782,7.039 21.329,7.039 21.329,9.978 28.983,9.978 "
         />
         <polygon
           fill="#EBEBEB"
-          points="38.171,3.541 33.717,3.541 33.717,2.981 38.171,2.981 38.171,0.184 30.515,0.184 30.515,6.479 
+          points="38.171,3.541 33.717,3.541 33.717,2.981 38.171,2.981 38.171,0.184 30.515,0.184 30.515,6.479
       34.969,6.479 34.969,7.039 30.515,7.039 30.515,9.978 38.171,9.978 "
         />
         <polygon
           fill="#FFFFFF"
-          points="34.39,31.203 33.813,37.71 25.504,37.71 25.504,44.063 33.267,44.063 32.532,52.303 25.504,54.209 
+          points="34.39,31.203 33.813,37.71 25.504,37.71 25.504,44.063 33.267,44.063 32.532,52.303 25.504,54.209
       25.504,60.818 38.44,57.214 38.535,56.141 40.021,39.416 40.174,37.71 41.315,24.85 25.504,24.85 25.504,31.203 "
         />
         <rect
@@ -140,6 +146,9 @@ const TechIcons = [
   },
   {
     name: "JavaScript",
+    info:
+      "JavaScript is a high-level, object oriented programming language that enables interactive web pages and applications.",
+    url: "https://www.ecma-international.org/ecma-262/10.0/",
     path: (
       <g>
         <path
@@ -172,6 +181,9 @@ const TechIcons = [
   },
   {
     name: "TypeScript",
+    info:
+      "TypeScript is a syntactical superset of JavaScript, adding static typing to the language. TypeScript transpiles to JavaScript.",
+    url: "https://www.typescriptlang.org/",
     path: (
       <g>
         <rect x="-0.055" fill="none" width="51.121" height="72" />
@@ -197,7 +209,10 @@ const TechIcons = [
     ),
   },
   {
-    name: "React.JS",
+    name: "React",
+    info:
+      "React is a JavaScript library for building UI (user interfaces) and DOM rendering. It is often used to build Single Page Applications.",
+    url: "https://reactjs.org/",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -262,6 +277,9 @@ const TechIcons = [
   },
   {
     name: "Redux",
+    info:
+      "Redux is a JavaScript library for managing application state. It is used in conjunction with React to build user interfaces.",
+    url: "https://redux.js.org/",
     path: (
       <g>
         <rect fill="none" width="51.12" height="72" />
@@ -296,6 +314,9 @@ const TechIcons = [
   },
   {
     name: "NodeJS",
+    info:
+      "NodeJS is a JavaScript runtime environment that allows for JavaScript code to be used for command line tools and server side scripting.",
+    url: "https://nodejs.org/en/",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -323,6 +344,9 @@ const TechIcons = [
   },
   {
     name: "Python",
+    info:
+      "Python is a dynamically typed , high-level, general-purpose programming language often used to make servers, as well as in data science.",
+    url: "https://www.python.org/",
     path: (
       <g>
         <rect x="-0.055" fill="none" width="51.121" height="72" />
@@ -377,6 +401,9 @@ const TechIcons = [
   },
   {
     name: "Express",
+    info:
+      "Express is a lightweight and unopinionated web application framework for Node.Js, designed for building servers and APIs.",
+    url: "https://expressjs.com/",
     path: (
       <g>
         <path
@@ -424,6 +451,9 @@ const TechIcons = [
   },
   {
     name: "Flask",
+    info:
+      "Flask is a web micro-framework written in Python. It is commonly used to build APIs and web servers.",
+    url: "https://flask.palletsprojects.com/en/1.1.x/",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1032,6 +1062,9 @@ const TechIcons = [
   },
   {
     name: "Docker",
+    info:
+      "Docker is a tool designed to make it easier to work with applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.",
+    url: "https://www.docker.com/",
     path: (
       <g>
         <rect fill="none" width="51.121" height="72" />
@@ -1080,6 +1113,9 @@ const TechIcons = [
   },
   {
     name: "AWS",
+    info:
+      "Amazon Web Services (AWS) is a collection of cloud computing services and APIs designed to allow developers on-demand access to computing infrastructure and distributed computing building blocks and tools.",
+    url: "https://aws.amazon.com/",
     path: (
       <g>
         <rect fill="none" width="51.121" height="72" />
@@ -1157,6 +1193,9 @@ const TechIcons = [
   },
   {
     name: "Google Firebase",
+    info:
+      "Firebase is a mobile and web application development platform offering services such as analytics and backend as a service.",
+    url: "https://firebase.google.com/",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1184,6 +1223,9 @@ const TechIcons = [
   },
   {
     name: "GraphQL",
+    info:
+      "GraphQL is a data query and manipulation language for APIs, as well as a runtime for fulfilling queries with existing data.",
+    url: "https://graphql.org/",
     path: (
       <g>
         <path
@@ -1211,6 +1253,9 @@ const TechIcons = [
   },
   {
     name: "MongoDB",
+    info:
+      "MongoDB is a NoSQL document-oriented database program. Fast and secure, MongoDB uses simple JSON-like objects with dedicated schemas.",
+    url: "https://www.mongodb.com/",
     path: (
       <g>
         <path
@@ -1256,6 +1301,9 @@ const TechIcons = [
   },
   {
     name: "PostgreSQL",
+    info:
+      "PostgreSQL is a relational database management system (RDBMS) developed for use with the SQL query language.",
+    url: "https://www.postgresql.org/",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1422,6 +1470,9 @@ const TechIcons = [
   },
   {
     name: "Adobe CC",
+    info:
+      "Adobe Creative Cloud is a set of applications and services used for graphic design, illustration, web development, photography and other creative pursuits.",
+    url: "https://www.adobe.com/creativecloud.html",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1482,7 +1533,10 @@ const TechIcons = [
     ),
   },
   {
-    name: "Adobe XD",
+    name: "XD",
+    info:
+      "Adobe XD is a vector-based user experience design tool used to create wireframes clickable prototypes for mobile and web applications.",
+    url: "https://www.adobe.com/products/xd.html",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1511,6 +1565,9 @@ const TechIcons = [
   },
   {
     name: "Photoshop",
+    info:
+      "Adobe Photoshop is a raster graphics editor used for graphic design, photography and digital art.",
+    url: "https://www.adobe.com/products/photoshop.html",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1553,6 +1610,9 @@ const TechIcons = [
   },
   {
     name: "Illustrator",
+    info:
+      "Adobe Illustrator is a vector graphics editor used for illustration, graphic design and typography.",
+    url: "https://www.adobe.com/products/illustrator.html",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1591,6 +1651,9 @@ const TechIcons = [
   },
   {
     name: "Git",
+    info:
+      "Git is a version-control system for tracking changes in source code during software development as well as coordinating work among programmers.",
+    url: "https://git-scm.com/",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -1613,6 +1676,9 @@ const TechIcons = [
   },
   {
     name: "GatsbyJS",
+    info:
+      "Gatsby is a web framework based on React primarily used to create static sites, and is also designed to run seamlessly with GraphQl.",
+    url: "https://www.gatsbyjs.org/",
     path: (
       <g>
         <path
@@ -1723,6 +1789,9 @@ const TechIcons = [
   },
   {
     name: "Ruby",
+    info:
+      "Like Python, Ruby is a dynamically typed, high-level, general-purpose programming language.",
+    url: "https://www.ruby-lang.org/en/",
     path: (
       <g>
         <linearGradient
@@ -2086,6 +2155,9 @@ const TechIcons = [
   },
   {
     name: "jQuery",
+    info:
+      "jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling and CSS animation.",
+    url: "https://jquery.com/",
     path: (
       <g>
         <path
@@ -2128,6 +2200,9 @@ const TechIcons = [
   },
   {
     name: "Sass",
+    info:
+      "Sass is a preprocessor scripting language that is compiled into Cascading Style Sheets (CSS). Sass is used to simplify and streamline CSS.",
+    url: "https://sass-lang.com/",
     path: (
       <g>
         <rect x="-0.056" fill="none" width="51.121" height="72" />
@@ -2158,7 +2233,10 @@ const TechIcons = [
     ),
   },
   {
-    name: "Jupyter Notebooks",
+    name: "Jupyter Notebook",
+    info:
+      "Jupyter Notebook is a web-based interactive computational environment that can be used for web-scraping, cloud computing operations or other data intensive tasks.",
+    url: "https://jupyter.org/",
     path: (
       <g>
         <circle fill="#FFFFFF" cx="25.504" cy="34.798" r="23.367" />

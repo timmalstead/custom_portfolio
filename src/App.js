@@ -15,7 +15,10 @@ const SiteHeader = React.lazy(() =>
   ]).then(([moduleExports]) => moduleExports)
 )
 //TECHS
-//add popups on hover for techs
+//review this one before publishing
+
+//ABOUT
+//do an about
 
 //PROJECTS
 //hover over the pics and it will use a transition to size up the pic to make it bigger. probably do this with a transition in color and blending too
