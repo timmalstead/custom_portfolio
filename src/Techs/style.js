@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const TechHolder = styled.div`
   padding: 1em 0;
-  margin: 1.25em 0 0 0;
+  margin: 1.5em 0 0 0;
   width: 98%;
   display: flex;
   flex-wrap: wrap;

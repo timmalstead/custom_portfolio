@@ -46,7 +46,7 @@ const Name = styled.div`
   text-decoration: none;
 
   span {
-    font-size: 1.75em;
+    font-size: 1.7em;
     margin: 0.3em 0.3em 0.3em 0;
   }
 
@@ -58,7 +58,7 @@ const Name = styled.div`
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 500px) {
     flex-direction: column;
 
     span {

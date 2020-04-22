@@ -15,27 +15,29 @@ const Techs = () => {
 
   const [popUpReversed, popUpDirectionSwitcher] = React.useState(false)
 
+  const mouseOver = (e, iconName) =>
+    window.innerWidth - e.target.getBoundingClientRect().x <= 250 &&
+    e.target.tagName !== "SPAN" &&
+    window.innerWidth >= 550
+      ? (changeHover({ ...hovering, [iconName]: true }),
+        popUpDirectionSwitcher(true))
+      : e.target.tagName !== "SPAN" && window.innerWidth >= 550
+      ? changeHover({ ...hovering, [iconName]: true })
+      : null
+
+  const mouseLeave = (e, iconName) =>
+    e.target.tagName !== "SPAN"
+      ? (changeHover({ ...hovering, [iconName]: false }),
+        popUpDirectionSwitcher(false))
+      : null
+
   return (
     <Style.TechHolder>
       {TechIcons.map((icon) => (
         <Style.IconHolder
           key={icon.name}
-          onMouseOver={(e) =>
-            window.innerWidth - e.target.getBoundingClientRect().x <= 250 &&
-            e.target.tagName !== "SPAN" &&
-            window.innerWidth >= 550
-              ? (changeHover({ ...hovering, [icon.name]: true }),
-                popUpDirectionSwitcher(true))
-              : e.target.tagName !== "SPAN" && window.innerWidth >= 550
-              ? changeHover({ ...hovering, [icon.name]: true })
-              : null
-          }
-          onMouseLeave={(e) =>
-            e.target.tagName !== "SPAN"
-              ? (changeHover({ ...hovering, [icon.name]: false }),
-                popUpDirectionSwitcher(false))
-              : null
-          }
+          onMouseOver={(e) => mouseOver(e, icon.name)}
+          onMouseLeave={(e) => mouseLeave(e, icon.name)}
         >
           <Style.PopUp
             style={{

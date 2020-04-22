@@ -17,6 +17,9 @@ const SiteHeader = React.lazy(() =>
 //TECHS
 //review this one before publishing
 
+//NAVBAR
+//bounce when switching between links?
+
 //SPLASH
 //have a couple pseudo-randomly determined layouts
 

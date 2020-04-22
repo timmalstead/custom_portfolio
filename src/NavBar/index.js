@@ -1,9 +1,29 @@
 import React from "react"
+import NavRoutes from "../SiteRoutes"
+import { NavLink } from "react-router-dom"
 import Nav from "./style"
+import { createGlobalStyle } from "styled-components"
 import Context from "../ThemeContext"
 
 const NavBar = (props) => {
-  const { headerColor, secondaryColor } = React.useContext(Context).styles
+  const {
+    headerColor,
+    secondaryColor,
+    textColor,
+    contrastOne,
+  } = React.useContext(Context).styles
+
+  const Active = createGlobalStyle`
+   a, .active::before {
+      color: ${textColor}
+    }
+    
+    .active {
+      color : ${contrastOne}
+    }
+
+`
+
   const { changeHeaderBorder } = props
 
   React.useEffect(() => {
@@ -18,7 +38,12 @@ const NavBar = (props) => {
         borderBottomColor: secondaryColor,
       }}
     >
-      <span>howdy</span>
+      {NavRoutes.map((route) => (
+        <NavLink key={route.key} exact to={route.path}>
+          {route.key}
+        </NavLink>
+      ))}
+      <Active />
     </Nav>
   )
 }
