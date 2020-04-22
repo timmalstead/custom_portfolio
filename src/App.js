@@ -43,6 +43,8 @@ const SiteHeader = React.lazy(() =>
 
 //so the order is about projects, creative works, transitions, splash,finish nav bar themes including custom themes, og tags, figure out footer spacing, and add support for hi def screens too
 
+//do a version with shallow props instead of context?
+
 const App = () => {
   const storage = window.localStorage
 
