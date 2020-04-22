@@ -7,7 +7,7 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* min-height: 48em; */
+  min-height: inherit;
 
   @media (max-width: 850px) {
     padding: 4.5em 0 0 0;

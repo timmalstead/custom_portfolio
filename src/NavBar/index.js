@@ -21,8 +21,7 @@ const NavBar = (props) => {
     .active {
       color : ${contrastOne}
     }
-
-`
+  `
 
   const { changeHeaderBorder } = props
 

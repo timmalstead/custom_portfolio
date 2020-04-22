@@ -9,6 +9,7 @@ const Nav = styled.nav`
   border-bottom-width: 0.09em;
   border-bottom-style: solid;
   animation: drop 0.5s ease-out;
+  z-index: 1;
 
   > * {
     font-style: italic;
@@ -18,6 +19,7 @@ const Nav = styled.nav`
 
   > *:not(:first-child)::before {
     content: " * ";
+    pointer-events: none;
     margin: 0 0.5em;
   }
 

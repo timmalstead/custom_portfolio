@@ -42,6 +42,7 @@ const SiteHeader = React.lazy(() =>
 //attach meta og tags to html file before you are done
 
 //so the order is about projects, creative works, transitions, splash,finish nav bar themes including custom themes, og tags, figure out footer spacing, and add support for hi def screens too
+
 const App = () => {
   const storage = window.localStorage
 
@@ -63,11 +64,15 @@ const App = () => {
 
     body {
       margin:0;
-      /* min-height:48em; */
+      min-height:52em;
       width: 100vw;
       background-color: ${styles.mainColor};
       color: ${styles.textColor};
       font-family: 'Lato', sans-serif;
+    }
+
+    #root {
+      min-height:inherit;
     }
   `
 
