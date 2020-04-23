@@ -10,7 +10,7 @@ const SiteHeader = (props) => {
   const { headerColor, secondaryColor, textColor } = React.useContext(
     Context
   ).styles
-  const { headerBorder } = props
+  const { headerBorder, toggleBorderBounce } = props
 
   return (
     <Styled.Header
@@ -20,10 +20,21 @@ const SiteHeader = (props) => {
         padding: headerBorder ? "initial" : ".625em 0 0 0",
       }}
     >
-      <Styled.Graphic as={Link} exact to="/">
+      <Styled.Graphic
+        onClick={() => toggleBorderBounce(true)}
+        as={Link}
+        exact
+        to="/"
+      >
         {Logo(secondaryColor)}
       </Styled.Graphic>
-      <Styled.Name as={Link} exact to="/" style={{ color: textColor }}>
+      <Styled.Name
+        onClick={() => toggleBorderBounce(true)}
+        as={Link}
+        exact
+        to="/"
+        style={{ color: textColor }}
+      >
         <span>Timothy</span>
         <span>Malstead</span>
       </Styled.Name>

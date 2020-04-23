@@ -8,7 +8,6 @@ const Nav = styled.nav`
   justify-content: center;
   border-bottom-width: 0.09em;
   border-bottom-style: solid;
-  animation: drop 0.5s ease-out;
   z-index: 1;
 
   > * {
@@ -22,6 +21,9 @@ const Nav = styled.nav`
     pointer-events: none;
     margin: 0 0.5em;
   }
+`
+const BounceNav = styled(Nav)`
+  animation: drop 0.5s ease-out;
 
   @keyframes drop {
     0% {
@@ -38,4 +40,5 @@ const Nav = styled.nav`
     }
   }
 `
-export default Nav
+
+export { Nav, BounceNav }

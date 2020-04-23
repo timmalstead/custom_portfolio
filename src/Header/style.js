@@ -17,7 +17,7 @@ const Header = styled.header`
   @media (max-width: 850px) {
     height: 4.5em;
     grid-template-areas: ". themes . name . icons .";
-    grid-template-columns: 4% min-content auto min-content auto min-content 4%;
+    grid-template-columns: 4% min-content 2% min-content auto min-content 4%;
   }
 `
 
@@ -58,7 +58,7 @@ const Name = styled.div`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     flex-direction: column;
 
     span {

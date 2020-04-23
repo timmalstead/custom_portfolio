@@ -58,6 +58,7 @@ const App = () => {
   })
 
   const [headerBorder, changeHeaderBorder] = React.useState(true)
+  const [borderBounce, toggleBorderBounce] = React.useState(true)
 
   const Global = createGlobalStyle`
     * {
@@ -66,11 +67,15 @@ const App = () => {
 
     body {
       margin:0;
-      min-height:52em;
+      min-height:48em;
       width: 100vw;
       background-color: ${styles.mainColor};
       color: ${styles.textColor};
       font-family: 'Lato', sans-serif;
+    }
+
+    a, .active::before {
+      color: ${styles.textColor}
     }
 
     #root {
@@ -81,7 +86,10 @@ const App = () => {
   return (
     <Provider value={{ styles, changeStyle }}>
       <React.Suspense fallback={<Loader />}>
-        <SiteHeader headerBorder={headerBorder} />
+        <SiteHeader
+          headerBorder={headerBorder}
+          toggleBorderBounce={toggleBorderBounce}
+        />
         <Main>
           <Router.Switch>
             <Router.Route exact path="/" render={() => <Splash />} />
@@ -92,7 +100,11 @@ const App = () => {
                 path={route.path}
                 render={() => (
                   <React.Fragment>
-                    <NavBar changeHeaderBorder={changeHeaderBorder} />
+                    <NavBar
+                      changeHeaderBorder={changeHeaderBorder}
+                      borderBounce={borderBounce}
+                      toggleBorderBounce={toggleBorderBounce}
+                    />
                     {route.comp}
                   </React.Fragment>
                 )}
