@@ -1,6 +1,6 @@
 import React from "react"
-import fullIcons from "../images/fullSizeIcons"
-import mobileIcons from "../images/mobileIcons"
+import fullIcons from "./fullSizeIcons"
+import mobileIcons from "./mobileIcons"
 import * as Style from "./style"
 import Context from "../ThemeContext"
 

@@ -1,5 +1,5 @@
 import React from "react"
-import NavRoutes from "../SiteRoutes"
+import NavRoutes from "../navRoutes"
 import { NavLink } from "react-router-dom"
 import * as Styled from "./style"
 import Context from "../ThemeContext"

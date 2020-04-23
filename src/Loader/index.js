@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from "../images/logo"
+import Logo from "../logo"
 import Animation from "./style"
 import Context from "../ThemeContext"
 

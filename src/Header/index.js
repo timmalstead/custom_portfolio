@@ -1,7 +1,7 @@
 import React from "react"
-import Logo from "../images/logo"
+import Logo from "../logo"
 import Links from "../Links"
-import Theme from "../Theme"
+import ThemeGear from "../ThemeGear"
 import { Link } from "react-router-dom"
 import * as Styled from "./style"
 import Context from "../ThemeContext"
@@ -39,7 +39,7 @@ const SiteHeader = (props) => {
         <span>Malstead</span>
       </Styled.Name>
       <Links />
-      <Theme />
+      <ThemeGear />
     </Styled.Header>
   )
 }

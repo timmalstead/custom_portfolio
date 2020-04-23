@@ -1,6 +1,6 @@
 import React from "react"
 
-const OptionsGear = (color) => (
+const Gear = (color) => (
   <svg x="0px" y="0px" viewBox="0 0 40 40">
     <path
       fill={color}
@@ -25,4 +25,4 @@ const OptionsGear = (color) => (
   </svg>
 )
 
-export default OptionsGear
+export default Gear

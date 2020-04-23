@@ -1,5 +1,5 @@
 import React from "react"
-import NavRoutes from "../SiteRoutes"
+import NavRoutes from "../navRoutes"
 import { Link } from "react-router-dom"
 
 const Splash = () => (

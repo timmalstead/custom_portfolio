@@ -1,5 +1,5 @@
 import React from "react"
-import TechIcons from "../images/techIcons"
+import TechIcons from "./techIcons"
 import * as Style from "./style"
 import Context from "../ThemeContext"
 

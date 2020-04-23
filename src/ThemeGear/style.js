@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const ThemeHolder = styled.div`
+const GearHolder = styled.div`
   grid-area: themes;
   height: 2.5em;
   width: 2.5em;
@@ -20,4 +20,4 @@ const ThemeHolder = styled.div`
     }
   }
 `
-export default ThemeHolder
+export default GearHolder
