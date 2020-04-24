@@ -62,7 +62,7 @@ const Name = styled.div`
     flex-direction: column;
 
     span {
-      font-size: min(6vw, 1.5em);
+      font-size: min(6vw, 1.45em);
     }
   }
 `

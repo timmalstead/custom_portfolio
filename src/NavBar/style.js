@@ -14,6 +14,10 @@ const Nav = styled.nav`
     font-style: italic;
     font-size: 1.1em;
     text-decoration: none;
+
+    @media (max-width: 550px) {
+      font-size: 0.9em;
+    }
   }
 
   > *:not(:first-child)::before {

@@ -3,6 +3,7 @@ import Projects from "./Projects"
 import Techs from "./Techs"
 import About from "./About"
 
+// prettier-ignore
 const NavRoutes = [
   {
     key: "About",
@@ -14,7 +15,11 @@ const NavRoutes = [
     path: "/projects",
     comp: <Projects />,
   },
-  { key: "Techs", path: "/techs", comp: <Techs /> },
+  { 
+    key: "Techs",
+    path: "/techs", 
+    comp: <Techs /> 
+  },
 ]
 
 export default NavRoutes
