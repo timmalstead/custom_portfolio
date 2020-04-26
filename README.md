@@ -1,5 +1,6 @@
 //ABOUT
 //getting there, not done yet
+//have the spin or not? have the shift to self portrait or not?
 
 //PROJECTS
 //hover over the pics and it will use a transition to size up the pic to make it bigger. probably do this with a transition in color and blending too

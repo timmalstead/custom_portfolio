@@ -2,7 +2,6 @@ import React from "react"
 import * as Style from "./style"
 import Context from "../ThemeContext"
 import ProfilePic from "./profilePic.jpg"
-import SelfPortrait from "./selfPortrait.png"
 
 const aboutMe = `
   I am a Full Stack Software Developer, UI Designer and Illustrator 
@@ -15,7 +14,6 @@ const aboutMe = `
 const About = () => {
   const { secondaryColor, contrastOne } = React.useContext(Context).styles
 
-  const [profileSwitch, switchPics] = React.useState(ProfilePic)
   const [spinClick, setToSpin] = React.useState(false)
 
   const spinThenDelay = () => {
@@ -28,10 +26,8 @@ const About = () => {
   return (
     <Style.AboutHolder>
       <Style.Profile
-        src={profileSwitch}
-        alt="my mug"
-        onMouseOver={() => switchPics(SelfPortrait)}
-        onMouseOut={() => switchPics(ProfilePic)}
+        src={ProfilePic}
+        alt="selfie"
         onClick={() => spinThenDelay()}
         style={{ animation: spinClick ? "spin 0.5s ease-in-out" : null }}
       />
