@@ -10,7 +10,7 @@ import flashLights from "./flashLights.png"
 const folioProjects = [
   {
     title: "LAFPC Dashboard",
-    thumb: FPCHackathon,
+    image: FPCHackathon,
     link: "https://lafpc-hackathon-dashboard.herokuapp.com/",
     github: "https://github.com/timmalstead/LAFPC_Hackathon_Final_Deployed",
     role: "Full Stack Developer",
@@ -18,17 +18,17 @@ const folioProjects = [
       "Winner of first prize and audience favorite at the Los Angeles Food Policy Council x General Assembly hackathon, LAFPC dashboard is an easy way to view, manage and visualize facts about food policy in Los Angeles County.",
   },
   {
-    title: "S.P.Y. Host Home",
-    thumb: homeUniteUs,
+    title: "Home Unite Us",
+    image: homeUniteUs,
     link: "https://lacommunity.site/hosthome/",
-    github: "https://github.com/hackforla/host-home-poc",
+    github: "https://github.com/hackforla/HomeUniteUs",
     role: "Lead Front End Developer",
     description:
       "A web application that matches homeless and at-risk youth with short term host housing and job training to help transition into a more stable life. Created with the team at Hack for LA, it feels great to work on something that makes a real difference.",
   },
   {
     title: "Sirvy",
-    thumb: sirvy,
+    image: sirvy,
     link: "https://sirvy.herokuapp.com/",
     github: "https://github.com/timmalstead/sirvy",
     role: "Full Stack Developer & UI Designer",
@@ -37,7 +37,7 @@ const folioProjects = [
   },
   {
     title: "Night In",
-    thumb: nightIn,
+    image: nightIn,
     link: "https://night-in.herokuapp.com/",
     github: "https://github.com/timmalstead/Night_in_front_end",
     role: "Lead Front End Developer & UI Designer",
@@ -46,7 +46,7 @@ const folioProjects = [
   },
   {
     title: "Bulletin Bored",
-    thumb: bulletinBored,
+    image: bulletinBored,
     link: "https://bulletinbored.herokuapp.com/",
     github: "https://github.com/timmalstead/bulletinbored",
     role: "Full Stack Developer & UI Designer",
@@ -55,7 +55,7 @@ const folioProjects = [
   },
   {
     title: "The Thomas Friedman Column Generator",
-    thumb: columnGenerator,
+    image: columnGenerator,
     link: "https://veryimportantcolumngenerator.herokuapp.com/",
     github: "https://github.com/timmalstead/Very_Important_Column_Generator",
     role: "Full Stack Developer & Designer",
@@ -64,16 +64,16 @@ const folioProjects = [
   },
   {
     title: "Bag of Holding",
-    thumb: bagOfHolding,
+    image: bagOfHolding,
     link: "https://timmalstead.github.io/bagofholding/",
     github: "https://github.com/timmalstead/bagofholding",
-    role: "Front End Developer & Writer",
+    role: "Front End Developer, Writer & Illustrator",
     description:
       "A text based adventure game played in the browser console. A long term project, first level playable now!",
   },
   {
     title: "Flash.Lights",
-    thumb: flashLights,
+    image: flashLights,
     link: "https://timmalstead.github.io/flash_lights/",
     github: "https://github.com/timmalstead/flash_lights",
     role: "Front End Developer & Designer",

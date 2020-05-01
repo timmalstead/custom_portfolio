@@ -23,7 +23,7 @@ const Projects = () => {
             <div>
               {linkMaker(
                 project.link,
-                <Style.Image alt={project.title} src={project.thumb} />
+                <Style.Image alt={project.title} src={project.image} />
               )}
             </div>
           </Style.ImageHolder>
@@ -35,7 +35,7 @@ const Projects = () => {
               {project.role}
             </Style.Role>
             <Style.Description>{project.description}</Style.Description>
-            {linkMaker(project.github, "View on Github")}
+            {linkMaker(project.github, `View ${project.title} on GitHub`)}
           </Style.InfoHolder>
         </Style.SingleProjectHolder>
       ))}

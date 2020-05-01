@@ -9,10 +9,12 @@ const AllProjectsHolder = styled.div`
 
 const SingleProjectHolder = styled.div`
   display: inherit;
+  margin: 1em 0;
 `
 
 const ImageHolder = styled.div`
-  width: 52%;
+  width: 50%;
+  height: 50vh;
   overflow: hidden;
 
   div {
@@ -22,6 +24,7 @@ const ImageHolder = styled.div`
 `
 
 const Image = styled.img`
+  width: 100%;
   transform: scale(1);
   transition: transform 0.5s ease-in-out;
 
