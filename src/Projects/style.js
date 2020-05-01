@@ -31,11 +31,13 @@ const Image = styled.img`
 `
 
 const InfoHolder = styled.div`
+  padding: 0 4em;
   display: inherit;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1;
+  text-align: center;
 `
 
 const Title = styled.h2`
@@ -48,7 +50,7 @@ const Title = styled.h2`
 `
 
 const Role = styled.em`
-  margin: 0 0 1em 0;
+  margin: 0 0 0.25em 0;
 `
 
 const Description = styled.p`

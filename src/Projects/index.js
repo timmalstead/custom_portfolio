@@ -6,6 +6,12 @@ import Context from "../ThemeContext"
 const Projects = () => {
   const { secondaryColor, contrastOne } = React.useContext(Context).styles
 
+  const linkMaker = (link, content) => (
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      {content}
+    </a>
+  )
+
   return (
     <Style.AllProjectsHolder>
       {folioProjects.map((project, i) => (
@@ -15,24 +21,21 @@ const Projects = () => {
         >
           <Style.ImageHolder>
             <div>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              {linkMaker(
+                project.link,
                 <Style.Image alt={project.title} src={project.thumb} />
-              </a>
+              )}
             </div>
           </Style.ImageHolder>
           <Style.InfoHolder>
             <Style.Title style={{ borderBottomColor: secondaryColor }}>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                {project.title}
-              </a>
+              {linkMaker(project.link, project.title)}
             </Style.Title>
             <Style.Role style={{ color: contrastOne }}>
               {project.role}
             </Style.Role>
             <Style.Description>{project.description}</Style.Description>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">
-              View on GitHub
-            </a>
+            {linkMaker(project.github, "View on Github")}
           </Style.InfoHolder>
         </Style.SingleProjectHolder>
       ))}
