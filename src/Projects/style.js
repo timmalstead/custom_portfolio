@@ -13,7 +13,7 @@ const SingleProjectHolder = styled.div`
 
 const ImageHolder = styled.div`
   width: 50%;
-  height: 50vh;
+  height: 24em;
   overflow: hidden;
 
   div {

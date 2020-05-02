@@ -1,10 +1,10 @@
 import FPCHackathon from "./FPCHackathon.png"
 import homeUniteUs from "./homeUniteUs.png"
 import sirvy from "./sirvy.png"
-import nightIn from "./nightIn.png"
-import bulletinBored from "./bulletinBored.png"
 import columnGenerator from "./columnGenerator.png"
 import bagOfHolding from "./bagOfHolding.png"
+import nightIn from "./nightIn.png"
+import bulletinBored from "./bulletinBored.png"
 import flashLights from "./flashLights.png"
 
 const folioProjects = [
@@ -36,24 +36,6 @@ const folioProjects = [
       "Sirvy allows users to send surveys via SMS, and then visualize the data in graph form.",
   },
   {
-    title: "Night In",
-    image: nightIn,
-    link: "https://night-in.herokuapp.com/",
-    github: "https://github.com/timmalstead/Night_in_front_end",
-    role: "Lead Front End Developer & UI Designer",
-    description:
-      "The perfect dinner and a movie, every time. Select recipes and public domain movies based on user preferences.",
-  },
-  {
-    title: "Bulletin Bored",
-    image: bulletinBored,
-    link: "https://bulletinbored.herokuapp.com/",
-    github: "https://github.com/timmalstead/bulletinbored",
-    role: "Full Stack Developer & UI Designer",
-    description:
-      "A note taking app created to further my understanding of React Hooks and GraphQL",
-  },
-  {
     title: "The Thomas Friedman Column Generator",
     image: columnGenerator,
     link: "https://veryimportantcolumngenerator.herokuapp.com/",
@@ -72,7 +54,25 @@ const folioProjects = [
       "A text based adventure game played in the browser console. A long term project, first level playable now!",
   },
   {
-    title: "Flash.Lights",
+    title: "Night In",
+    image: nightIn,
+    link: "https://night-in.herokuapp.com/",
+    github: "https://github.com/timmalstead/Night_in_front_end",
+    role: "Lead Front End Developer & UI Designer",
+    description:
+      "The perfect dinner and a movie, every time. Select recipes and public domain movies based on user preferences.",
+  },
+  {
+    title: "Bulletin Bored",
+    image: bulletinBored,
+    link: "https://bulletinbored.herokuapp.com/",
+    github: "https://github.com/timmalstead/bulletinbored",
+    role: "Full Stack Developer & UI Designer",
+    description:
+      "A note taking app created to further my understanding of React Hooks and GraphQL",
+  },
+  {
+    title: "Flash.Lights.",
     image: flashLights,
     link: "https://timmalstead.github.io/flash_lights/",
     github: "https://github.com/timmalstead/flash_lights",

@@ -1,11 +1,8 @@
 //ABOUT
 //getting there, not done yet
-//have the spin or not? have the shift to self portrait or not?
 
 //PROJECTS
 //hover over the pics and it will use a transition to size up the pic to make it bigger. probably do this with a transition in color and blending too
-//do all the projects in a loop with things going => and <= for rhythm
-//also bring in your app logos from your projects
 
 //PRINT, ILLO AND OTHER CREATIVE WORK
 
@@ -20,6 +17,6 @@
 //how to transition between components mounting?
 //attach meta og tags to html file before you are done
 
-//so the order is about projects, creative works, transitions, splash,finish nav bar themes including custom themes, og tags and add support for hi def screens too
+//so the order is about creative works, transitions, splash, finish nav bar, themes including custom themes, og tags and add support for hi def screens too
 
 //do a version with shallow props instead of context?

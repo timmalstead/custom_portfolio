@@ -21,11 +21,7 @@ const Projects = () => {
             flexDirection: i % 2 === 0 ? "row" : "row-reverse",
           }}
         >
-          <Style.ImageHolder
-            style={{
-              borderRadius: i % 2 === 0 ? "0 0 0 2em" : "0 0 2em 0",
-            }}
-          >
+          <Style.ImageHolder>
             <div>
               {linkMaker(
                 project.link,
