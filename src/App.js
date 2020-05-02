@@ -19,7 +19,6 @@ const App = () => {
   const storage = window.localStorage
 
   const [styles, changeStyle] = React.useState({
-    loadAnimations: storage.loadAnimations || true,
     mainColor: storage.mainColor || "#212123",
     secondaryColor: storage.secondaryColor || "#585b60",
     headerColor: storage.headerColor || "#212123",

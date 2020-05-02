@@ -2,15 +2,18 @@ import FPCHackathon from "./FPCHackathon.png"
 import homeUniteUs from "./homeUniteUs.png"
 import sirvy from "./sirvy.png"
 import columnGenerator from "./columnGenerator.png"
+import columnGeneratorMobile from "./columnGeneratorMobile.png"
 import bagOfHolding from "./bagOfHolding.png"
-import nightIn from "./nightIn.png"
 import bulletinBored from "./bulletinBored.png"
+import bulletinBoredMobile from "./bulletinBoredMobile.png"
+import nightIn from "./nightIn.png"
 import flashLights from "./flashLights.png"
 
 const folioProjects = [
   {
     title: "LAFPC Dashboard",
     fullImage: FPCHackathon,
+    mobileImage: false,
     link: "https://lafpc-hackathon-dashboard.herokuapp.com/",
     github: "https://github.com/timmalstead/LAFPC_Hackathon_Final_Deployed",
     role: "Full Stack Developer",
@@ -21,6 +24,7 @@ const folioProjects = [
   {
     title: "Home Unite Us",
     fullImage: homeUniteUs,
+    mobileImage: false,
     link: "https://lacommunity.site/hosthome/",
     github: "https://github.com/hackforla/HomeUniteUs",
     role: "Lead Front End Developer",
@@ -31,6 +35,7 @@ const folioProjects = [
   {
     title: "Sirvy",
     fullImage: sirvy,
+    mobileImage: false,
     link: "https://sirvy.herokuapp.com/",
     github: "https://github.com/timmalstead/sirvy",
     role: "Full Stack Developer & UI Designer",
@@ -41,6 +46,7 @@ const folioProjects = [
   {
     title: "The Thomas Friedman Column Generator",
     fullImage: columnGenerator,
+    mobileImage: columnGeneratorMobile,
     link: "https://veryimportantcolumngenerator.herokuapp.com/",
     github: "https://github.com/timmalstead/Very_Important_Column_Generator",
     role: "Full Stack Developer & Designer",
@@ -51,6 +57,7 @@ const folioProjects = [
   {
     title: "Bag of Holding",
     fullImage: bagOfHolding,
+    mobileImage: false,
     link: "https://timmalstead.github.io/bagofholding/",
     github: "https://github.com/timmalstead/bagofholding",
     role: "Front End Developer, Writer & Illustrator",
@@ -59,8 +66,20 @@ const folioProjects = [
     center: false,
   },
   {
+    title: "Bulletin Bored",
+    fullImage: bulletinBored,
+    mobileImage: bulletinBoredMobile,
+    link: "https://bulletinbored.herokuapp.com/",
+    github: "https://github.com/timmalstead/bulletinbored",
+    role: "Full Stack Developer & UI Designer",
+    description:
+      "A note taking app created to further my understanding of React Hooks and GraphQL",
+    center: false,
+  },
+  {
     title: "Night In",
     fullImage: nightIn,
+    mobileImage: false,
     link: "https://night-in.herokuapp.com/",
     github: "https://github.com/timmalstead/Night_in_front_end",
     role: "Lead Front End Developer & UI Designer",
@@ -69,18 +88,9 @@ const folioProjects = [
     center: true,
   },
   {
-    title: "Bulletin Bored",
-    fullImage: bulletinBored,
-    link: "https://bulletinbored.herokuapp.com/",
-    github: "https://github.com/timmalstead/bulletinbored",
-    role: "Full Stack Developer & UI Designer",
-    description:
-      "A note taking app created to further my understanding of React Hooks and GraphQL",
-    center: true,
-  },
-  {
     title: "Flash.Lights.",
     fullImage: flashLights,
+    mobileImage: false,
     link: "https://timmalstead.github.io/flash_lights/",
     github: "https://github.com/timmalstead/flash_lights",
     role: "Front End Developer & Designer",

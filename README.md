@@ -4,6 +4,7 @@
 //PROJECTS
 //hover over the pics and it will use a transition to size up the pic to make it bigger. probably do this with a transition in color and blending too
 //change bulletin bored centering? fill up with things instead?
+//refactor sirvy to resize graph better
 
 //PRINT, ILLO AND OTHER CREATIVE WORK
 

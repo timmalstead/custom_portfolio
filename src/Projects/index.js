@@ -6,13 +6,37 @@ import Context from "../ThemeContext"
 const Projects = () => {
   const { secondaryColor, contrastOne } = React.useContext(Context).styles
 
+  const fullPics = folioProjects.reduce((arr, val) => {
+    arr.push(val.fullImage)
+    return arr
+  }, [])
+
+  const mobilePics = folioProjects.reduce((arr, val) => {
+    arr.push(val.mobileImage || val.fullImage)
+    return arr
+  }, [])
+
+  const [picturesToRender, changePictureSet] = React.useState(
+    window.innerWidth > 800 ? fullPics : mobilePics
+  )
+
+  React.useEffect(() => {
+    const firePictureChange = () => {
+      window.innerWidth > 800
+        ? changePictureSet(fullPics)
+        : changePictureSet(mobilePics)
+    }
+
+    window.addEventListener("resize", firePictureChange)
+
+    return () => window.removeEventListener("resize", firePictureChange)
+  })
+
   const linkMaker = (link, content) => (
     <a href={link} target="_blank" rel="noopener noreferrer">
       {content}
     </a>
   )
-
-  //need to center bottom three profile pics and unify lengths.
 
   return (
     <Style.AllProjectsHolder>
@@ -28,7 +52,7 @@ const Projects = () => {
           >
             {linkMaker(
               project.link,
-              <Style.Image alt={project.title} src={project.fullImage} />
+              <Style.Image alt={project.title} src={picturesToRender[i]} />
             )}
           </Style.ImageHolder>
           <Style.InfoHolder>
