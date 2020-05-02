@@ -17,9 +17,15 @@ const Projects = () => {
       {folioProjects.map((project, i) => (
         <Style.SingleProjectHolder
           key={project.title}
-          style={{ flexDirection: i % 2 === 0 ? "row" : "row-reverse" }}
+          style={{
+            flexDirection: i % 2 === 0 ? "row" : "row-reverse",
+          }}
         >
-          <Style.ImageHolder>
+          <Style.ImageHolder
+            style={{
+              borderRadius: i % 2 === 0 ? "0 0 0 2em" : "0 0 2em 0",
+            }}
+          >
             <div>
               {linkMaker(
                 project.link,

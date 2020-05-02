@@ -9,7 +9,6 @@ const AllProjectsHolder = styled.div`
 
 const SingleProjectHolder = styled.div`
   display: inherit;
-  margin: 1em 0;
 `
 
 const ImageHolder = styled.div`
