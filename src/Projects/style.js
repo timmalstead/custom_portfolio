@@ -9,16 +9,20 @@ const AllProjectsHolder = styled.div`
 
 const SingleProjectHolder = styled.div`
   display: inherit;
+
+  @media (max-width: 850px) {
+    flex-direction: column !important;
+  }
 `
 
 const ImageHolder = styled.div`
   width: 50%;
   height: 24em;
   overflow: hidden;
+  display: flex;
 
-  div {
-    display: flex;
-    justify-content: center;
+  @media (max-width: 850px) {
+    width: 100%;
   }
 `
 
@@ -40,6 +44,10 @@ const InfoHolder = styled.div`
   align-items: center;
   flex: 1;
   text-align: center;
+
+  @media (max-width: 850px) {
+    margin: 0 0 3em 0;
+  }
 `
 
 const Title = styled.h2`

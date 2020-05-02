@@ -12,6 +12,8 @@ const Projects = () => {
     </a>
   )
 
+  //need to center bottom three profile pics and unify lengths.
+
   return (
     <Style.AllProjectsHolder>
       {folioProjects.map((project, i) => (
@@ -21,13 +23,13 @@ const Projects = () => {
             flexDirection: i % 2 === 0 ? "row" : "row-reverse",
           }}
         >
-          <Style.ImageHolder>
-            <div>
-              {linkMaker(
-                project.link,
-                <Style.Image alt={project.title} src={project.image} />
-              )}
-            </div>
+          <Style.ImageHolder
+            style={{ alignItems: project.center ? "center" : "flex-start" }}
+          >
+            {linkMaker(
+              project.link,
+              <Style.Image alt={project.title} src={project.fullImage} />
+            )}
           </Style.ImageHolder>
           <Style.InfoHolder>
             <Style.Title style={{ borderBottomColor: secondaryColor }}>
