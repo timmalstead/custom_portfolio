@@ -9,6 +9,12 @@ const AllProjectsHolder = styled.div`
 
 const SingleProjectHolder = styled.div`
   display: inherit;
+  margin: 0;
+  transition: margin 0.25s linear;
+
+  :hover {
+    margin: 2em 0;
+  }
 
   @media (max-width: 850px) {
     flex-direction: column !important;
@@ -28,12 +34,12 @@ const ImageHolder = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  transform: scale(1);
+  /* transform: scale(1);
   transition: transform 0.5s ease-in-out;
 
   :hover {
     transform: scale(1.1);
-  }
+  } */
 `
 
 const InfoHolder = styled.div`
