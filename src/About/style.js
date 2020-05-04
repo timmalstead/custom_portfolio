@@ -11,6 +11,10 @@ const AboutHolder = styled.div`
     ". profile . article ."
     ". . . . .";
 
+  @media (max-width: 950px) {
+    grid-template-rows: 15% max-content auto;
+  }
+
   @media (max-width: 800px) {
     display: flex;
     flex-direction: column;

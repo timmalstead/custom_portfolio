@@ -4,7 +4,16 @@ import * as Style from "./style"
 import Context from "../ThemeContext"
 
 const Projects = () => {
-  const { secondaryColor, contrastOne } = React.useContext(Context).styles
+  const { mainColor, secondaryColor, contrastOne } = React.useContext(
+    Context
+  ).styles
+
+  const [projectHover, changeProjectHover] = React.useState(
+    folioProjects.reduce((hoverHolder, project) => {
+      hoverHolder[project.title] = false
+      return hoverHolder
+    }, {})
+  )
 
   const fullPics = folioProjects.reduce((arr, val) => {
     arr.push(val.fullImage)
@@ -45,7 +54,16 @@ const Projects = () => {
           key={project.title}
           style={{
             flexDirection: i % 2 === 0 ? "row" : "row-reverse",
+            backgroundColor: projectHover[project.title]
+              ? secondaryColor
+              : mainColor,
           }}
+          onMouseOver={() =>
+            changeProjectHover({ ...projectHover, [project.title]: true })
+          }
+          onMouseOut={() =>
+            changeProjectHover({ ...projectHover, [project.title]: false })
+          }
         >
           <Style.ImageHolder
             style={{ alignItems: project.center ? "center" : "flex-start" }}

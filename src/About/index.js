@@ -3,12 +3,19 @@ import * as Style from "./style"
 import Context from "../ThemeContext"
 import ProfilePic from "./profilePic.jpg"
 
-const aboutMe = `
-  I am a Full Stack Software Developer, UI Designer and Illustrator 
+const parOne = `
+  I am a Full Stack Software Developer and UI Designer
   with extensive experience in React and Node.js seeking 
   to help make this world a more beautiful and
   lively place. I focus on creating intuitive, elegant and visually
   pleasing software that simplifies the life of the end user.
+`
+
+const parTwo = `
+  My technical acumen, combined with my creative and artistic
+  history make me a unique and valuable team member on any project,
+  large or small. I hope you'll take a look at my work and reach out.
+  Together we can make something wonderful.
 `
 
 const About = () => {
@@ -41,7 +48,8 @@ const About = () => {
           }}
         />
         <p>Hello, I'm Timothy Malstead</p>
-        <p>{aboutMe}</p>
+        <p>{parOne}</p>
+        <p>{parTwo}</p>
       </Style.Blurb>
     </Style.AboutHolder>
   )
