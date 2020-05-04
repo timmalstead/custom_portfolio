@@ -1,5 +1,4 @@
 import React from "react"
-import Logo from "../logo"
 import codeBg from "./codeBg.jpg"
 import NavRoutes from "../navRoutes"
 import { Link } from "react-router-dom"
@@ -16,9 +15,15 @@ const Splash = () => {
           backgroundImage: `linear-gradient(${mainColor}00 50%, ${mainColor}FF), url(${codeBg})`,
         }}
       >
+        <Style.NameHolder
+          style={{
+            borderBottom: `.09em solid ${secondaryColor}`,
+          }}
+        >
+          <Style.Name>Timothy Malstead</Style.Name>
+        </Style.NameHolder>
         <Style.TypeEffect />
       </Style.ImageHolder>
-      <Style.Graphic>{Logo(secondaryColor)}</Style.Graphic>
       {NavRoutes.map((route) => (
         <Link key={route.key} to={route.path}>
           {route.key}
