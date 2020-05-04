@@ -3,7 +3,7 @@ import TechIcons from "./techIcons"
 import * as Style from "./style"
 import Context from "../ThemeContext"
 
-const Techs = () => {
+const Tools = () => {
   const { secondaryColor, contrastOne } = React.useContext(Context).styles
 
   const [hovering, changeHover] = React.useState(
@@ -74,4 +74,4 @@ const Techs = () => {
   )
 }
 
-export default Techs
+export default Tools
