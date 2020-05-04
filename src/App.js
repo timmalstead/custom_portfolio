@@ -1,7 +1,6 @@
 import React from "react"
 import Loader from "./Loader"
 import SiteFooter from "./Footer"
-import Splash from "./SplashPage"
 import NavBar from "./NavBar"
 import NavRoutes from "./navRoutes"
 import * as Router from "react-router-dom"
@@ -61,7 +60,6 @@ const App = () => {
         />
         <Main>
           <Router.Switch>
-            <Router.Route exact path="/" render={() => <Splash />} />
             {NavRoutes.map((route) => (
               <Router.Route
                 key={route.key}

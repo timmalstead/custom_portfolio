@@ -7,7 +7,7 @@ import Techs from "./Techs"
 const NavRoutes = [
   {
     key: "About",
-    path: "/about",
+    path: "/",
     comp: <About />,
   },
   {
