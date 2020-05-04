@@ -1,7 +1,7 @@
 import React from "react"
 import About from "./About"
 import Projects from "./Projects"
-import Techs from "./Techs"
+import Tools from "./Techs"
 
 // prettier-ignore
 const NavRoutes = [
@@ -16,9 +16,9 @@ const NavRoutes = [
     comp: <Projects />,
   },
   { 
-    key: "Techs",
-    path: "/techs", 
-    comp: <Techs /> 
+    key: "Tools",
+    path: "/tools", 
+    comp: <Tools /> 
   },
 ]
 
