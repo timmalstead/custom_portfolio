@@ -13,13 +13,18 @@ const SplashHolder = styled.div`
 const ImageHolder = styled.div`
   width: 35%;
   height: 42em;
-  padding: 3em 1em;
+  padding: 2em 1em 1em 1em;
   display: inherit;
   flex-direction: column;
+  justify-content: space-between;
 
   @media (max-width: 900px) {
     width: 100%;
     height: 11em;
+  }
+
+  @media (max-width: 550px) {
+    height: 9em;
   }
 `
 
@@ -174,4 +179,60 @@ const TypeEffect = styled(Name)`
   }
 `
 
-export { SplashHolder, ImageHolder, NameHolder, Name, TypeEffect }
+const MadeWithLove = styled.span`
+  font-family: "EB Garamond", serif;
+  align-self: flex-end;
+
+  @media (max-width: 700px) {
+    visibility: hidden;
+  }
+`
+
+const ProjectLinksHolder = styled.div`
+  width: 65%;
+  height: 42em;
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 30em;
+  }
+
+  @media (max-width: 550px) {
+    height: 20em;
+  }
+`
+
+const RouteHolder = styled.div`
+  width: 90%;
+  display: inherit;
+  align-items: center;
+  font-size: 7em;
+
+  @media (max-width: 900px) {
+    font-size: 15vw;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 18vw;
+  }
+
+  a {
+    text-decoration: none;
+    transition: border-bottom 0.25s linear;
+  }
+`
+
+export {
+  SplashHolder,
+  ImageHolder,
+  NameHolder,
+  Name,
+  TypeEffect,
+  MadeWithLove,
+  ProjectLinksHolder,
+  RouteHolder,
+}

@@ -6,11 +6,6 @@ import Tools from "./Techs"
 // prettier-ignore
 const NavRoutes = [
   {
-    key: "About",
-    path: "/about",
-    comp: <About />,
-  },
-  {
     key: "Projects",
     path: "/projects",
     comp: <Projects />,
@@ -19,6 +14,11 @@ const NavRoutes = [
     key: "Tools",
     path: "/tools", 
     comp: <Tools /> 
+  },
+  {
+    key: "About Me",
+    path: "/about",
+    comp: <About />,
   },
 ]
 

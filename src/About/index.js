@@ -19,7 +19,7 @@ const parTwo = `
 `
 
 const About = () => {
-  const { secondaryColor, contrastOne } = React.useContext(Context).styles
+  const { secondaryColor, contrastTwo } = React.useContext(Context).styles
 
   const [spinClick, setToSpin] = React.useState(false)
 
@@ -40,7 +40,7 @@ const About = () => {
       />
       <Style.Blurb>
         <h1>
-          Let's Make Something <em style={{ color: contrastOne }}>Wonderful</em>
+          Let's Make Something <em style={{ color: contrastTwo }}>Wonderful</em>
         </h1>
         <span
           style={{
