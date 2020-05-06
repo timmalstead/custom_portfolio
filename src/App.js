@@ -40,6 +40,10 @@ const App = () => {
       box-sizing:border-box;
     }
 
+    *::selection {
+      background-color : ${styles.contrastTwo}
+    }
+
     body {
       margin:0;
       min-height:48em;
