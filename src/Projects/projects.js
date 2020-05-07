@@ -1,5 +1,6 @@
 import FPCHackathon from "./FPCHackathon.png"
 import homeUniteUs from "./homeUniteUs.png"
+import portfolio from "./portfolio.png"
 import sirvy from "./sirvy.png"
 import columnGenerator from "./columnGenerator.png"
 import columnGeneratorMobile from "./columnGeneratorMobile.png"
@@ -31,6 +32,17 @@ const folioProjects = [
     description:
       "A web application that matches homeless and at-risk youth with short term host housing and job training to help transition into a more stable life. Created with the team at Hack for LA, it feels great to work on something that makes a real difference.",
     center: false,
+  },
+  {
+    title: "Portfolio Site",
+    fullImage: portfolio,
+    mobileImage: "",
+    link: "https://timmalstead.com/",
+    github: "https://github.com/timmalstead/custom_portfolio",
+    role: "Sole Designer and Developer",
+    description:
+      "My newest portfolio and the very site you are on right now. Some of the most concise React I've written to date.",
+    center: true,
   },
   {
     title: "Sirvy",
