@@ -1,3 +1,5 @@
+import fola from "./fola.png"
+import folaMobile from "./folaMobile.png"
 import FPCHackathon from "./FPCHackathon.png"
 import homeUniteUs from "./homeUniteUs.png"
 import portfolio from "./portfolio.png"
@@ -11,6 +13,17 @@ import nightIn from "./nightIn.png"
 import flashLights from "./flashLights.png"
 
 const folioProjects = [
+  {
+    title: "Food Oasis Los Angeles",
+    fullImage: fola,
+    mobileImage: folaMobile,
+    link: "https://food-oasis.herokuapp.com/",
+    github: "https://github.com/hackforla/food-oasis",
+    role: "Front End Developer",
+    description:
+      "Find Food Pantries, Food Banks and Meal Programs in Los Angeles County. Food For All!",
+    center: true,
+  },
   {
     title: "LAFPC Dashboard",
     fullImage: FPCHackathon,
