@@ -10,12 +10,10 @@ const ThemeGear = () => {
   const [showThemeSelector, toggleThemeSelector] = React.useState(false)
 
   return (
-    <React.Fragment>
-      <GearHolder onClick={() => toggleThemeSelector(!showThemeSelector)}>
-        {Gear(secondaryColor)}
-      </GearHolder>
+    <GearHolder onClick={() => toggleThemeSelector(!showThemeSelector)}>
+      {Gear(secondaryColor)}
       {showThemeSelector ? <ThemeSelector /> : null}
-    </React.Fragment>
+    </GearHolder>
   )
 }
 

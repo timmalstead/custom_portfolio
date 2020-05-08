@@ -1,5 +1,27 @@
 import React from "react"
+import PopUp from "./style"
+import Context from "../ThemeContext"
 
-const ThemeSelector = () => <p>I'm a theme selector</p>
+const ThemeSelector = () => {
+  const { secondaryColor } = React.useContext(Context).styles
+
+  return (
+    <PopUp>
+      <div
+        style={{
+          borderBottomColor: secondaryColor,
+        }}
+      />
+      <article
+        style={{
+          backgroundColor: secondaryColor,
+          textAlign: "center",
+        }}
+      >
+        Theme Selector Coming <em>very</em> soon
+      </article>
+    </PopUp>
+  )
+}
 
 export default ThemeSelector
