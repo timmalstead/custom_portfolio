@@ -34,7 +34,7 @@ const About = () => {
     <Style.AboutHolder>
       <Style.Profile
         src={ProfilePic}
-        alt="selfie"
+        alt="Profile Pic"
         onClick={() => spinThenDelay()}
         style={{ animation: spinClick ? "spin 0.5s ease-in-out" : null }}
       />

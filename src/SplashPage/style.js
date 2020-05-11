@@ -226,6 +226,21 @@ const RouteHolder = styled.div`
   }
 `
 
+const EffectHolder = styled.div`
+  display: inherit;
+  justify-content: space-evenly;
+  flex: 1;
+`
+
+const EffectImg = styled.img`
+  height: 1.5em;
+  border-radius: 50%;
+`
+
+const EffectSvg = styled.svg`
+  height: 1em;
+`
+
 export {
   SplashHolder,
   ImageHolder,
@@ -235,4 +250,7 @@ export {
   MadeWithLove,
   ProjectLinksHolder,
   RouteHolder,
+  EffectHolder,
+  EffectImg,
+  EffectSvg,
 }
