@@ -31,6 +31,10 @@ const Splash = () => {
 
     //remember to keep an eye on styling at smaller sizes with this, and fix backgrounds of icons to main background color?
     switch (route) {
+      case "Projects":
+        return folioProjects.map((project) => (
+          <Style.ProjectImg src={project.fullImage} alt={project.title} />
+        ))
       case "Tools":
         const iconCopy = [...TechIcons]
         const iconBundle = []
@@ -44,7 +48,7 @@ const Splash = () => {
           <Style.EffectSvg viewBox="0 0 51 72">{icon.path}</Style.EffectSvg>
         ))
       default:
-        return <Style.EffectImg src={profilePic} alt="Profile Pic" />
+        return <Style.ProfileImg src={profilePic} alt="Profile Pic" />
     }
   }
 
@@ -68,7 +72,7 @@ const Splash = () => {
         <Style.MadeWithLove>Made with {heart} in React.JS</Style.MadeWithLove>
       </Style.ImageHolder>
       <Style.ProjectLinksHolder>
-        {NavRoutes.map((route, i) => (
+        {NavRoutes.map((route) => (
           <Style.RouteHolder key={route.key}>
             <Link
               key={route.key}

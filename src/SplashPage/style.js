@@ -232,13 +232,17 @@ const EffectHolder = styled.div`
   flex: 1;
 `
 
-const EffectImg = styled.img`
-  height: 1.5em;
-  border-radius: 50%;
+const ProjectImg = styled.img`
+  width: 1.5em;
 `
 
 const EffectSvg = styled.svg`
   height: 1em;
+`
+
+const ProfileImg = styled.img`
+  height: 1.5em;
+  border-radius: 50%;
 `
 
 export {
@@ -251,6 +255,7 @@ export {
   ProjectLinksHolder,
   RouteHolder,
   EffectHolder,
-  EffectImg,
+  ProjectImg,
   EffectSvg,
+  ProfileImg,
 }
