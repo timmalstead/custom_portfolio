@@ -25,30 +25,50 @@ const Splash = () => {
   )
 
   const loadingEffect = (route) => {
-    //have to include projects and figure out a way to make profile pic responsive. still i think that the pegging the number of icons to the window.innerWidth is cool.
-
-    //figure loading animation tranition too
-
-    //remember to keep an eye on styling at smaller sizes with this, and fix backgrounds of icons to main background color?
     switch (route) {
       case "Projects":
-        return folioProjects.map((project) => (
-          <Style.ProjectImg src={project.fullImage} alt={project.title} />
-        ))
+        const randNum = Math.floor(Math.random() * folioProjects.length)
+        const randProject = folioProjects[randNum]
+        return (
+          <Style.ProjectImg
+            style={{
+              backgroundImage: `url(${randProject.fullImage})`,
+              backgroundPosition: randProject.center ? "center" : "top",
+              left: hoverEffects[route] ? "0em" : "150vw",
+            }}
+          />
+        )
       case "Tools":
         const iconCopy = [...TechIcons]
         const iconBundle = []
-        //may want to have different divisions based on innerwidth for icons
-        for (let i = 0; i < Math.floor(window.innerWidth / 200); i++) {
+        const screenDivisor =
+          window.innerWidth >= 1000
+            ? Math.floor(window.innerWidth / 250)
+            : Math.ceil(window.innerWidth / 250)
+        for (let i = 0; i < screenDivisor; i++) {
           const randomNum = Math.floor(Math.random() * iconCopy.length)
           iconBundle.push(iconCopy[randomNum])
           iconCopy.splice(randomNum, 1)
         }
-        return iconBundle.map((icon) => (
-          <Style.EffectSvg viewBox="0 0 51 72">{icon.path}</Style.EffectSvg>
+        return iconBundle.map((icon, i) => (
+          <Style.EffectSvg
+            viewBox="0 0 51 72"
+            style={{
+              left: hoverEffects[route] ? "0em" : "150vw",
+              transition: `left ${0.05 * i + 0.25}s linear`,
+            }}
+          >
+            {icon.path}
+          </Style.EffectSvg>
         ))
       default:
-        return <Style.ProfileImg src={profilePic} alt="Profile Pic" />
+        return (
+          <Style.ProfileImg
+            src={profilePic}
+            alt="Profile Pic"
+            style={{ left: hoverEffects[route] ? "0em" : "150vw" }}
+          />
+        )
     }
   }
 

@@ -1,5 +1,4 @@
 //PROJECTS
-//add in portfolio and fola as projects
 //change bulletin bored centering? fill up with things instead?
 //refactor sirvy to resize graph better?
 

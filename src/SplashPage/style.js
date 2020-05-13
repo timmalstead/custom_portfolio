@@ -207,10 +207,10 @@ const ProjectLinksHolder = styled.div`
 `
 
 const RouteHolder = styled.div`
-  width: 90%;
+  width: 95%;
   display: inherit;
   align-items: center;
-  font-size: 7em;
+  font-size: 9vw;
 
   @media (max-width: 900px) {
     font-size: 15vw;
@@ -232,17 +232,36 @@ const EffectHolder = styled.div`
   flex: 1;
 `
 
-const ProjectImg = styled.img`
-  width: 1.5em;
+const ProjectImg = styled.div`
+  position: relative;
+  width: 3em;
+  height: 1.62em;
+  background-size: 100%;
+  transition: left 0.25s linear;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `
 
 const EffectSvg = styled.svg`
+  position: relative;
   height: 1em;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `
 
 const ProfileImg = styled.img`
+  position: relative;
   height: 1.5em;
   border-radius: 50%;
+  transition: left 0.25s linear;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `
 
 export {
