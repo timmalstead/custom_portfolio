@@ -237,7 +237,7 @@ const ProjectImg = styled.div`
   width: 3em;
   height: 1.62em;
   background-size: 100%;
-  transition: left 0.25s linear;
+  transition: left 0.5s linear;
 
   @media (max-width: 900px) {
     display: none;
@@ -257,7 +257,7 @@ const ProfileImg = styled.img`
   position: relative;
   height: 1.5em;
   border-radius: 50%;
-  transition: left 0.25s linear;
+  transition: left 0.5s linear;
 
   @media (max-width: 900px) {
     display: none;
