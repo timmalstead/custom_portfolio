@@ -8,7 +8,6 @@ const Nav = styled.nav`
   justify-content: center;
   border-bottom-width: 0.09em;
   border-bottom-style: solid;
-  z-index: 1;
 
   > * {
     font-style: italic;

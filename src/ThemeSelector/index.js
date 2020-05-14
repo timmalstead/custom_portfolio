@@ -15,7 +15,6 @@ const ThemeSelector = () => {
       <article
         style={{
           backgroundColor: secondaryColor,
-          textAlign: "center",
         }}
       >
         Theme Selector Coming <em>very</em> soon

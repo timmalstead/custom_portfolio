@@ -20,6 +20,7 @@ const PopUp = styled.div`
     min-height: 20em;
     width: 15em;
     border-radius: 0.5em;
+    text-align: center;
   }
 `
 

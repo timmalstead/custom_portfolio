@@ -12,3 +12,4 @@
 //how to transition between components mounting?
 //add support for hi def screens too
 //do a version with shallow props instead of context?
+//another set of project pics for splash page?

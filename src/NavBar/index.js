@@ -16,7 +16,7 @@ const NavBar = (props) => {
     return () => changeHeaderBorder(true)
   })
 
-  const [spaceLetters, changeLetterSpace] = React.useState(
+  const [letterHoverEffects, changeLetterHover] = React.useState(
     NavRoutes.reduce((routesObj, singleRoute) => {
       routesObj[singleRoute.key] = false
       return routesObj
@@ -25,7 +25,10 @@ const NavBar = (props) => {
 
   const letterSpaceOnlyInactiveLinks = (e, key, mouseOver) => {
     if (![...e.target.classList].includes("active")) {
-      changeLetterSpace({ ...spaceLetters, [key]: mouseOver ? true : false })
+      changeLetterHover({
+        ...letterHoverEffects,
+        [key]: mouseOver ? true : false,
+      })
     }
   }
 
@@ -42,7 +45,7 @@ const NavBar = (props) => {
       activeStyle={{ color: contrastOne }}
       onClick={() => toggleBorderBounce(false)}
       style={{
-        letterSpacing: spaceLetters[route.key] ? ".25em" : "initial",
+        letterSpacing: letterHoverEffects[route.key] ? ".25em" : "initial",
         transition: "letter-spacing .25s linear",
       }}
       onMouseOver={(e) => letterSpaceOnlyInactiveLinks(e, route.key, true)}
