@@ -7,6 +7,7 @@ import profilePic from "../About/profilePic.jpg"
 import { Link } from "react-router-dom"
 import * as Style from "./style"
 import Context from "../ThemeContext"
+// import Photoshop from "../TempPhotoshopColorPicker"
 
 const Splash = () => {
   const {
@@ -88,6 +89,7 @@ const Splash = () => {
             <Style.Name>Timothy Malstead</Style.Name>
           </Style.NameHolder>
           <Style.TypeEffect />
+          {/* <Photoshop /> */}
         </div>
         <Style.MadeWithLove>Made with {heart} in React.JS</Style.MadeWithLove>
       </Style.ImageHolder>
