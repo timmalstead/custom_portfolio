@@ -5,7 +5,7 @@ import * as Style from "./style"
 import Context from "../ThemeContext"
 
 const Links = () => {
-  const { textColor, contrastOne } = React.useContext(Context).styles
+  const { headerText, contrastOne } = React.useContext(Context).styles
 
   const initialIcons = window.innerWidth > 850 ? fullIcons : mobileIcons
 
@@ -40,7 +40,7 @@ const Links = () => {
             <svg
               viewBox={link.viewBox}
               style={{
-                fill: hovering[link.key] ? contrastOne : textColor,
+                fill: hovering[link.key] ? contrastOne : headerText,
               }}
               onMouseOver={() => changeHover({ ...hovering, [link.key]: true })}
               onMouseOut={() => changeHover({ ...hovering, [link.key]: false })}

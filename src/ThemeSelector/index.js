@@ -6,14 +6,7 @@ import Context from "../ThemeContext"
 const ThemeSelector = () => {
   const { styles, changeStyle } = React.useContext(Context)
 
-  // const {
-  //   mainColor,
-  //   secondaryColor,
-  //   headerColor,
-  //   textColor,
-  //   contrastOne,
-  //   contrastTwo,
-  // } = styles
+  const { mainColor, secondaryColor, contrastOne } = styles
 
   const initialPopUpLocation = window.innerWidth > 850 ? false : true
 
@@ -48,23 +41,27 @@ const ThemeSelector = () => {
     setPickerVisibility()
   }
 
-  const themeColors = () => {
+  const themeDisplay = () => {
     const colorArr = []
-    for (const color in styles) {
-      colorArr.push(
-        <Style.ColorHolder
-          onClick={() =>
-            callColorPicker(color, styles[color], () =>
-              switchPickerVisible(true)
-            )
-          }
-          style={{
-            borderColor:
-              color === "secondaryColor" ? styles.contrastOne : "transparent",
-            backgroundColor: styles[color],
-          }}
-        />
-      )
+    for (const str in styles) {
+      if (str !== "name") {
+        colorArr.push(
+          <Style.ColorHolder
+            onClick={() =>
+              callColorPicker(str, styles[str], () => switchPickerVisible(true))
+            }
+            style={{
+              borderColor:
+                str === "secondaryColor" || str === "headerSecondary"
+                  ? mainColor
+                  : "transparent",
+              backgroundColor: styles[str],
+            }}
+          />
+        )
+      } else {
+        colorArr.push(<Style.ThemeTitle>{styles[str]}</Style.ThemeTitle>)
+      }
     }
     return colorArr
   }
@@ -87,17 +84,23 @@ const ThemeSelector = () => {
       <Style.PopUp>
         <section
           style={{
-            borderBottomColor: styles.secondaryColor,
+            borderBottomColor: secondaryColor,
           }}
         />
         <main
           style={{
-            backgroundColor: styles.secondaryColor,
+            backgroundColor: secondaryColor,
             right: popUpLocation ? ".5em" : "12em",
           }}
         >
-          {themeColors()}
-          {/* Theme Selector Coming <em>Soon</em> */}
+          <Style.ThemeComponentTitle
+            style={{
+              borderBottom: `.03em solid ${contrastOne}`,
+            }}
+          >
+            <span>Themes</span>
+          </Style.ThemeComponentTitle>
+          {themeDisplay()}
         </main>
       </Style.PopUp>
     </React.Fragment>

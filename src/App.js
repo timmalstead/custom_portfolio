@@ -19,10 +19,13 @@ const App = () => {
   const storage = window.localStorage
 
   const [styles, changeStyle] = React.useState({
+    name: storage.name || "Sleek",
     mainColor: storage.mainColor || "#212123",
     secondaryColor: storage.secondaryColor || "#585b60",
-    headerColor: storage.headerColor || "#212123",
     textColor: storage.textColor || "#eceff5",
+    headerColor: storage.headerColor || "#212123",
+    headerSecondary: storage.headerSecondary || "#585b60",
+    headerText: storage.headerText || "#eceff5",
     contrastOne: storage.constrastOne || "#d7d950",
     contrastTwo: storage.contrastTwo || "#68c2c8",
   })

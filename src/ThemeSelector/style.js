@@ -27,13 +27,13 @@ const PopUp = styled.div`
 
   main {
     position: relative;
-    font-family: "EB Garamond", serif;
     padding: 1em;
     min-height: 20em;
     width: 15em;
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 `
@@ -41,8 +41,18 @@ const PopUp = styled.div`
 const ColorHolder = styled.div`
   width: 3em;
   height: 3em;
-  border-width: 0.1em;
+  border-width: 0.03em;
   border-style: solid;
 `
 
-export { PopUp, PickerHolder, ColorHolder }
+const ThemeComponentTitle = styled.span`
+  width: min-content;
+  font-size: 1.7em;
+`
+
+const ThemeTitle = styled.em`
+  font-size: 1.2em;
+  margin: 0.4em 0;
+`
+
+export { PopUp, PickerHolder, ColorHolder, ThemeComponentTitle, ThemeTitle }

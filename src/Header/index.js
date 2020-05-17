@@ -7,7 +7,7 @@ import * as Styled from "./style"
 import Context from "../ThemeContext"
 
 const SiteHeader = (props) => {
-  const { headerColor, secondaryColor, textColor } = React.useContext(
+  const { headerColor, headerSecondary, headerText } = React.useContext(
     Context
   ).styles
   const { headerBorder, toggleBorderBounce } = props
@@ -16,7 +16,7 @@ const SiteHeader = (props) => {
     <Styled.Header
       style={{
         backgroundColor: headerColor,
-        borderBottomColor: headerBorder ? secondaryColor : "transparent",
+        borderBottomColor: headerBorder ? headerSecondary : "transparent",
         padding: headerBorder ? "initial" : ".625em 0 0 0",
       }}
     >
@@ -26,14 +26,14 @@ const SiteHeader = (props) => {
         exact
         to="/"
       >
-        {Logo(secondaryColor)}
+        {Logo(headerSecondary)}
       </Styled.Graphic>
       <Styled.Name
         onClick={() => toggleBorderBounce(true)}
         as={Link}
         exact
         to="/"
-        style={{ color: textColor }}
+        style={{ color: headerText }}
       >
         <span>Timothy</span>
         <span>Malstead</span>

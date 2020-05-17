@@ -51,6 +51,7 @@ const Splash = () => {
         }
         return iconBundle.map((icon, i) => (
           <Style.EffectSvg
+            key={icon.name}
             viewBox="0 0 51 72"
             style={{
               left: hoverEffects[route] ? "0em" : "105vw",

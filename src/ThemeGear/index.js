@@ -5,7 +5,7 @@ import GearHolder from "./style"
 import Context from "../ThemeContext"
 
 const ThemeGear = () => {
-  const { secondaryColor } = React.useContext(Context).styles
+  const { headerSecondary } = React.useContext(Context).styles
 
   const [showThemeSelector, toggleThemeSelector] = React.useState(false)
 
@@ -18,7 +18,7 @@ const ThemeGear = () => {
           : null
       }}
     >
-      {Gear(secondaryColor)}
+      {Gear(headerSecondary)}
       {showThemeSelector ? <ThemeSelector /> : null}
     </GearHolder>
   )
