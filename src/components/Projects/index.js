@@ -1,7 +1,7 @@
 import React from "react"
 import folioProjects from "./projects"
 import * as Style from "./style"
-import Context from "../ThemeContext"
+import Context from "../../ThemeContext"
 
 const Projects = () => {
   const { mainColor, secondaryColor, contrastOne } = React.useContext(

@@ -1,6 +1,6 @@
 import React from "react"
 import * as Style from "./style"
-import Context from "../ThemeContext"
+import Context from "../../ThemeContext"
 import ProfilePic from "./profilePic.jpg"
 
 const parOne = `

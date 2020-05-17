@@ -1,10 +1,10 @@
 import React from "react"
-import Logo from "../logo"
+import Logo from "../../logo"
 import Links from "../Links"
 import ThemeGear from "../ThemeGear"
 import { Link } from "react-router-dom"
 import * as Styled from "./style"
-import Context from "../ThemeContext"
+import Context from "../../ThemeContext"
 
 const SiteHeader = (props) => {
   const { headerColor, headerSecondary, headerText } = React.useContext(

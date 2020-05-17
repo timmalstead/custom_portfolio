@@ -2,7 +2,7 @@ import React from "react"
 import ThemeSelector from "../ThemeSelector"
 import Gear from "./gear"
 import GearHolder from "./style"
-import Context from "../ThemeContext"
+import Context from "../../ThemeContext"
 
 const ThemeGear = () => {
   const { headerSecondary } = React.useContext(Context).styles

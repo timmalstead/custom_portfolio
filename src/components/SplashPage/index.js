@@ -1,12 +1,12 @@
 import React from "react"
 import splashPhotos from "./splashPhotos"
-import NavRoutes from "../navRoutes"
+import NavRoutes from "../../navRoutes"
 import folioProjects from "../Projects/projects"
 import TechIcons from "../Techs/techIcons"
 import profilePic from "../About/profilePic.jpg"
 import { Link } from "react-router-dom"
 import * as Style from "./style"
-import Context from "../ThemeContext"
+import Context from "../../ThemeContext"
 
 const Splash = () => {
   const {

@@ -1,8 +1,8 @@
 import React from "react"
-import NavRoutes from "../navRoutes"
+import NavRoutes from "../../navRoutes"
 import { NavLink } from "react-router-dom"
 import * as Styled from "./style"
-import Context from "../ThemeContext"
+import Context from "../../ThemeContext"
 
 const NavBar = (props) => {
   const {

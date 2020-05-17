@@ -2,7 +2,7 @@ import React from "react"
 import fullIcons from "./fullSizeIcons"
 import mobileIcons from "./mobileIcons"
 import * as Style from "./style"
-import Context from "../ThemeContext"
+import Context from "../../ThemeContext"
 
 const Links = () => {
   const { headerText, contrastOne } = React.useContext(Context).styles

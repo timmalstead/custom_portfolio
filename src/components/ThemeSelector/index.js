@@ -2,7 +2,7 @@ import React from "react"
 import * as Style from "./style"
 import themes from "./themes"
 import { PhotoshopPicker } from "react-color"
-import Context from "../ThemeContext"
+import Context from "../../ThemeContext"
 
 console.table(themes)
 
