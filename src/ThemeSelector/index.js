@@ -1,25 +1,36 @@
 import React from "react"
-import PopUp from "./style"
+import * as Style from "./style"
+import { SketchPicker } from "react-color"
 import Context from "../ThemeContext"
 
 const ThemeSelector = () => {
-  const { secondaryColor } = React.useContext(Context).styles
+  const { styles, changeStyle } = React.useContext(Context)
 
   return (
-    <PopUp>
-      <div
-        style={{
-          borderBottomColor: secondaryColor,
-        }}
-      />
-      <article
-        style={{
-          backgroundColor: secondaryColor,
-        }}
-      >
-        Theme Selector Coming <em>very</em> soon
-      </article>
-    </PopUp>
+    <React.Fragment>
+      <Style.PickerHolder>
+        <SketchPicker
+          color={styles.mainColor}
+          onChange={(e) => changeStyle({ ...styles, mainColor: e.hex })}
+          disableAlpha={true}
+          width={"50vw"}
+          presetColors={[]}
+        />
+      </Style.PickerHolder>
+      <Style.PopUp>
+        <div
+          style={{
+            borderBottomColor: styles.secondaryColor,
+          }}
+        />
+        <main
+          style={{
+            backgroundColor: styles.secondaryColor,
+            right: "12em",
+          }}
+        ></main>
+      </Style.PopUp>
+    </React.Fragment>
   )
 }
 

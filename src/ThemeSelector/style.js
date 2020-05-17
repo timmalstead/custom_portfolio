@@ -1,5 +1,17 @@
 import styled from "styled-components"
 
+const PickerHolder = styled.div`
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const PopUp = styled.div`
   div {
     position: relative;
@@ -12,9 +24,8 @@ const PopUp = styled.div`
     border-bottom-style: solid;
   }
 
-  article {
+  main {
     position: relative;
-    right: 12em;
     font-family: "EB Garamond", serif;
     padding: 1em;
     min-height: 20em;
@@ -24,4 +35,4 @@ const PopUp = styled.div`
   }
 `
 
-export default PopUp
+export { PopUp, PickerHolder }

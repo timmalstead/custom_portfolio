@@ -10,7 +10,15 @@ const ThemeGear = () => {
   const [showThemeSelector, toggleThemeSelector] = React.useState(false)
 
   return (
-    <GearHolder onClick={() => toggleThemeSelector(!showThemeSelector)}>
+    <GearHolder
+      title="theme-popup"
+      onClick={(e) => {
+        console.log(e.target.attributes)
+        return e.target.attributes.title?.nodeValue === "theme-popup"
+          ? toggleThemeSelector(!showThemeSelector)
+          : null
+      }}
+    >
       {Gear(secondaryColor)}
       {showThemeSelector ? <ThemeSelector /> : null}
     </GearHolder>

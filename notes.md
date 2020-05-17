@@ -9,6 +9,8 @@
 //colors of course and see if you can do dynamic favicons
 //nice bright grad as an option, different colors for footer
 
+//only have theme box dissappear when clicking on gear?
+
 //how to transition between components mounting?
 //add support for hi def screens too
 //do a version with shallow props instead of context?
