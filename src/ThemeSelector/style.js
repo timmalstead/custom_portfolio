@@ -14,7 +14,7 @@ const PickerHolder = styled.div`
 `
 
 const PopUp = styled.div`
-  div {
+  section {
     position: relative;
     left: 0.25em;
     height: 0;
@@ -32,8 +32,17 @@ const PopUp = styled.div`
     min-height: 20em;
     width: 15em;
     border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
     text-align: center;
   }
 `
 
-export { PopUp, PickerHolder }
+const ColorHolder = styled.div`
+  width: 3em;
+  height: 3em;
+  border-width: 0.1em;
+  border-style: solid;
+`
+
+export { PopUp, PickerHolder, ColorHolder }

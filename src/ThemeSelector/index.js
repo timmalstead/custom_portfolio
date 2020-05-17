@@ -6,10 +6,24 @@ import Context from "../ThemeContext"
 const ThemeSelector = () => {
   const { styles, changeStyle } = React.useContext(Context)
 
+  // const {
+  //   mainColor,
+  //   secondaryColor,
+  //   headerColor,
+  //   textColor,
+  //   contrastOne,
+  //   contrastTwo,
+  // } = styles
+
   const initialPopUpLocation = window.innerWidth > 850 ? false : true
 
   const [popUpLocation, shiftPopUp] = React.useState(initialPopUpLocation)
+
   const [pickerVisible, switchPickerVisible] = React.useState(false)
+  const [selectedColor, selectCurrentColor] = React.useState({
+    colorName: "Color Picker",
+    hex: "#FF0000",
+  })
 
   React.useEffect(() => {
     const adjustPopUp = () => {
@@ -21,33 +35,69 @@ const ThemeSelector = () => {
     return () => window.removeEventListener("resize", adjustPopUp)
   })
 
+  const callColorPicker = (colorTitle, color, setPickerVisibility) => {
+    selectCurrentColor({ colorName: colorTitle, hex: color })
+    setPickerVisibility()
+  }
+
+  const setColor = (setPickerVisibility) => {
+    changeStyle({
+      ...styles,
+      [selectedColor.colorName]: selectedColor.hex,
+    })
+    setPickerVisibility()
+  }
+
+  const themeColors = () => {
+    const colorArr = []
+    for (const color in styles) {
+      colorArr.push(
+        <Style.ColorHolder
+          onClick={() =>
+            callColorPicker(color, styles[color], () =>
+              switchPickerVisible(true)
+            )
+          }
+          style={{
+            borderColor:
+              color === "secondaryColor" ? styles.contrastOne : "transparent",
+            backgroundColor: styles[color],
+          }}
+        />
+      )
+    }
+    return colorArr
+  }
+
   return (
     <React.Fragment>
-      {/* {pickerVisible ? (
+      {pickerVisible ? (
         <Style.PickerHolder>
           <PhotoshopPicker
-            header="Pass in Color Name"
-            color={styles.mainColor}
-            onChange={(e) => changeStyle({ ...styles, mainColor: e.hex })}
-            onAccept={() => {}}
-            onCancel={() => {}}
+            header={selectedColor.colorName}
+            color={selectedColor.hex}
+            onChange={(e) =>
+              selectCurrentColor({ ...selectedColor, hex: e.hex })
+            }
+            onAccept={() => setColor(() => switchPickerVisible(false))}
+            onCancel={() => switchPickerVisible(false)}
           />
         </Style.PickerHolder>
-      ) : null} */}
+      ) : null}
       <Style.PopUp>
-        <div
+        <section
           style={{
             borderBottomColor: styles.secondaryColor,
           }}
         />
         <main
-          onClick={() => switchPickerVisible(!pickerVisible)}
           style={{
             backgroundColor: styles.secondaryColor,
             right: popUpLocation ? ".5em" : "12em",
           }}
         >
-          Theme Selector Coming <em>Soon</em>
+          {themeColors()}
+          {/* Theme Selector Coming <em>Soon</em> */}
         </main>
       </Style.PopUp>
     </React.Fragment>

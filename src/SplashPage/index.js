@@ -14,7 +14,6 @@ const Splash = () => {
     secondaryColor,
     textColor,
     contrastTwo,
-    heart,
   } = React.useContext(Context).styles
 
   const [hoverEffects, changeHoverEffects] = React.useState(
@@ -89,7 +88,13 @@ const Splash = () => {
           </Style.NameHolder>
           <Style.TypeEffect />
         </div>
-        <Style.MadeWithLove>Made with {heart} in React.JS</Style.MadeWithLove>
+        <Style.MadeWithLove>
+          Made with{" "}
+          <span role="img" aria-label="red-heart">
+            ❤️
+          </span>{" "}
+          in React.JS
+        </Style.MadeWithLove>
       </Style.ImageHolder>
       <Style.ProjectLinksHolder>
         {NavRoutes.map((route) => (

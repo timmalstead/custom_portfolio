@@ -25,11 +25,6 @@ const App = () => {
     textColor: storage.textColor || "#eceff5",
     contrastOne: storage.constrastOne || "#d7d950",
     contrastTwo: storage.contrastTwo || "#68c2c8",
-    heart: storage.heart || (
-      <span role="img" aria-label="yellow-heart">
-        &#x1f49b;
-      </span>
-    ),
   })
 
   const [headerBorder, changeHeaderBorder] = React.useState(true)
