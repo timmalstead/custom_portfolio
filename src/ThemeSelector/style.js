@@ -10,6 +10,7 @@ const PickerHolder = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #000;
 `
 
 const PopUp = styled.div`

@@ -13,7 +13,6 @@ const ThemeGear = () => {
     <GearHolder
       title="theme-popup"
       onClick={(e) => {
-        console.log(e.target.attributes)
         return e.target.attributes.title?.nodeValue === "theme-popup"
           ? toggleThemeSelector(!showThemeSelector)
           : null

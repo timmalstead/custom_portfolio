@@ -10,6 +10,7 @@
 //nice bright grad as an option, different colors for footer
 
 //only have theme box dissappear when clicking on gear?
+//maybe have an intro component?
 
 //how to transition between components mounting?
 //add support for hi def screens too
