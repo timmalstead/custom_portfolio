@@ -1,6 +1,7 @@
 const themes = [
   {
     name: "Sleek",
+    imgKey: 0,
     mainColor: "#212123",
     secondaryColor: "#585b60",
     textColor: "#eceff5",
@@ -11,15 +12,16 @@ const themes = [
     contrastTwo: "#68c2c8",
   },
   {
-    name: "Basic",
-    mainColor: "#ffffff",
-    secondaryColor: "#1d1d1d",
-    textColor: "#000000",
+    name: "Greyscale",
+    imgKey: 1,
+    mainColor: "#bebebe",
+    secondaryColor: "#7b7b7b",
+    textColor: "#383838",
     headerColor: "#000000",
     headerSecondary: "#ffffff",
     headerText: "#ffffff",
-    contrastOne: "#a0a0a0",
-    contrastTwo: "#df115f",
+    contrastOne: "#e9e9e9",
+    contrastTwo: "#646464",
   },
 ]
 

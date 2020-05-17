@@ -1,5 +1,5 @@
 import React from "react"
-import codeBg from "./codeBg.jpg"
+import splashPhotos from "./splashPhotos"
 import NavRoutes from "../navRoutes"
 import folioProjects from "../Projects/projects"
 import TechIcons from "../Techs/techIcons"
@@ -10,6 +10,7 @@ import Context from "../ThemeContext"
 
 const Splash = () => {
   const {
+    imgKey,
     mainColor,
     secondaryColor,
     textColor,
@@ -51,7 +52,7 @@ const Splash = () => {
         }
         return iconBundle.map((icon, i) => (
           <Style.EffectSvg
-            key={icon.name}
+            key={i}
             viewBox="0 0 51 72"
             style={{
               left: hoverEffects[route] ? "0em" : "105vw",
@@ -76,7 +77,7 @@ const Splash = () => {
     <Style.SplashHolder>
       <Style.ImageHolder
         style={{
-          backgroundImage: `linear-gradient(${mainColor}00 50%, ${mainColor}FF), url(${codeBg})`,
+          backgroundImage: `linear-gradient(${mainColor}00 50%, ${mainColor}FF), url(${splashPhotos[imgKey]})`,
         }}
       >
         <div>
@@ -104,7 +105,7 @@ const Splash = () => {
               key={route.key}
               to={route.path}
               style={{
-                color: hoverEffects[route.key] ? textColor : secondaryColor,
+                color: hoverEffects[route.key] ? secondaryColor : textColor,
                 borderBottom: hoverEffects[route.key]
                   ? `.25em solid ${contrastTwo}`
                   : ".1em solid transparent",

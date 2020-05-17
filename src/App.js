@@ -20,6 +20,7 @@ const App = () => {
 
   const [styles, changeStyle] = React.useState({
     name: storage.name || "Sleek",
+    imgKey: storage.imgKey || 0,
     mainColor: storage.mainColor || "#212123",
     secondaryColor: storage.secondaryColor || "#585b60",
     textColor: storage.textColor || "#eceff5",

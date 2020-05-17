@@ -1,12 +1,19 @@
 import React from "react"
 import * as Style from "./style"
+import themes from "./themes"
 import { PhotoshopPicker } from "react-color"
 import Context from "../ThemeContext"
+
+console.table(themes)
 
 const ThemeSelector = () => {
   const { styles, changeStyle } = React.useContext(Context)
 
-  const { mainColor, secondaryColor, contrastOne } = styles
+  setTimeout(() => {
+    changeStyle(themes[1])
+  }, 2000)
+
+  const { mainColor, headerSecondary, contrastOne } = styles
 
   const initialPopUpLocation = window.innerWidth > 850 ? false : true
 
@@ -44,23 +51,27 @@ const ThemeSelector = () => {
   const themeDisplay = () => {
     const colorArr = []
     for (const str in styles) {
-      if (str !== "name") {
-        colorArr.push(
-          <Style.ColorHolder
-            onClick={() =>
-              callColorPicker(str, styles[str], () => switchPickerVisible(true))
-            }
-            style={{
-              borderColor:
-                str === "secondaryColor" || str === "headerSecondary"
-                  ? mainColor
-                  : "transparent",
-              backgroundColor: styles[str],
-            }}
-          />
-        )
-      } else {
-        colorArr.push(<Style.ThemeTitle>{styles[str]}</Style.ThemeTitle>)
+      if (str !== "imgKey") {
+        if (str !== "name") {
+          colorArr.push(
+            <Style.ColorHolder
+              key={str}
+              onClick={() =>
+                callColorPicker(str, styles[str], () =>
+                  switchPickerVisible(true)
+                )
+              }
+              style={{
+                borderColor: mainColor,
+                backgroundColor: styles[str],
+              }}
+            />
+          )
+        } else {
+          colorArr.push(
+            <Style.ThemeTitle key={str}>{styles[str]}</Style.ThemeTitle>
+          )
+        }
       }
     }
     return colorArr
@@ -84,12 +95,12 @@ const ThemeSelector = () => {
       <Style.PopUp>
         <section
           style={{
-            borderBottomColor: secondaryColor,
+            borderBottomColor: headerSecondary,
           }}
         />
         <main
           style={{
-            backgroundColor: secondaryColor,
+            backgroundColor: headerSecondary,
             right: popUpLocation ? ".5em" : "12em",
           }}
         >

@@ -5,9 +5,12 @@ import * as Styled from "./style"
 import Context from "../ThemeContext"
 
 const NavBar = (props) => {
-  const { headerColor, secondaryColor, contrastOne } = React.useContext(
-    Context
-  ).styles
+  const {
+    headerColor,
+    headerSecondary,
+    headerText,
+    contrastOne,
+  } = React.useContext(Context).styles
 
   const { changeHeaderBorder, borderBounce, toggleBorderBounce } = props
 
@@ -34,7 +37,7 @@ const NavBar = (props) => {
 
   const dynamicStyle = {
     backgroundColor: headerColor,
-    borderBottomColor: secondaryColor,
+    borderBottomColor: headerSecondary,
   }
 
   const routeLoop = NavRoutes.map((route) => (
@@ -45,6 +48,7 @@ const NavBar = (props) => {
       activeStyle={{ color: contrastOne }}
       onClick={() => toggleBorderBounce(false)}
       style={{
+        color: headerText,
         letterSpacing: letterHoverEffects[route.key] ? ".25em" : "initial",
         transition: "letter-spacing .25s linear",
       }}
