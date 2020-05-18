@@ -49,6 +49,25 @@ const ThemeSelector = () => {
     setPickerVisibility()
   }
 
+  const shiftTheme = (increment) => {
+    if (increment) {
+      themes[imgKey + 1]
+        ? changeStyle(themes[imgKey + 1])
+        : changeStyle(themes[0])
+    } else {
+      themes[imgKey - 1]
+        ? changeStyle(themes[imgKey - 1])
+        : changeStyle(themes[themes.length - 1])
+    }
+  }
+
+  React.useEffect(() => {
+    const storage = window.localStorage
+    for (const prop in styles) {
+      storage[prop] = styles[prop]
+    }
+  }, [styles])
+
   const themeDisplay = () => {
     const colorArr = []
     for (const str in styles) {
@@ -63,7 +82,10 @@ const ThemeSelector = () => {
               <Style.ColorHolder
                 onClick={() =>
                   callColorPicker(str, styles[str], () =>
-                    switchPickerVisible(true)
+                    /* switchPickerVisible(true) */
+                    console.log(
+                      "This is where the picker visibility callback will be called"
+                    )
                   )
                 }
                 style={{
@@ -82,22 +104,14 @@ const ThemeSelector = () => {
           colorArr.push(
             <Style.ThemeTitle key={str}>
               <Style.ArrowLeft
-                onClick={() =>
-                  themes[imgKey - 1]
-                    ? changeStyle(themes[imgKey - 1])
-                    : changeStyle(themes[themes.length - 1])
-                }
+                onClick={() => shiftTheme(false)}
                 style={{
                   borderRightColor: contrastOne,
                 }}
               />
               <em>{styles[str]}</em>
               <Style.ArrowRight
-                onClick={() =>
-                  themes[imgKey + 1]
-                    ? changeStyle(themes[imgKey + 1])
-                    : changeStyle(themes[0])
-                }
+                onClick={() => shiftTheme(true)}
                 style={{
                   borderLeftColor: contrastOne,
                 }}
