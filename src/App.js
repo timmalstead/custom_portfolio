@@ -45,6 +45,8 @@ const App = () => {
 
     body {
       margin:0;
+      overflow-x:hidden;
+      overflow-y:scroll;
       min-height:48em;
       width: 100vw;
       background-color: ${styles.mainColor};

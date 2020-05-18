@@ -34,7 +34,7 @@ const Splash = () => {
             style={{
               backgroundImage: `url(${randProject.fullImage})`,
               backgroundPosition: randProject.center ? "center" : "top",
-              left: hoverEffects[route] ? "0em" : "105vw",
+              left: hoverEffects[route] ? "0em" : "75vw",
             }}
           />
         )
@@ -55,7 +55,7 @@ const Splash = () => {
             key={i}
             viewBox="0 0 51 72"
             style={{
-              left: hoverEffects[route] ? "0em" : "105vw",
+              left: hoverEffects[route] ? "0em" : "75vw",
               transition: `left ${0.075 * i + 0.5}s linear`,
             }}
           >
@@ -67,7 +67,7 @@ const Splash = () => {
           <Style.ProfileImg
             src={profilePic}
             alt="Profile Pic"
-            style={{ left: hoverEffects[route] ? "0em" : "105vw" }}
+            style={{ left: hoverEffects[route] ? "0em" : "75vw" }}
           />
         )
     }

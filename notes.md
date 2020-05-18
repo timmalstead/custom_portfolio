@@ -8,6 +8,7 @@
 
 //dynamic favicons
 //nice bright grad as an option? different colors for footer?
+//svgs for routes
 
 //maybe have an intro component?
 
