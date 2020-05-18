@@ -1,8 +1,8 @@
 import React from "react"
-import Loader from "./Loader"
-import SiteFooter from "./Footer"
-import Splash from "./SplashPage"
-import NavBar from "./NavBar"
+import Loader from "./components/Loader"
+import SiteFooter from "./components/Footer"
+import Splash from "./components/SplashPage"
+import NavBar from "./components/NavBar"
 import NavRoutes from "./navRoutes"
 import * as Router from "react-router-dom"
 import Main from "./style"
@@ -10,7 +10,7 @@ import { createGlobalStyle } from "styled-components"
 import { Provider } from "./ThemeContext"
 const SiteHeader = React.lazy(() =>
   Promise.all([
-    import("./Header"),
+    import("./components/Header"),
     new Promise((resolve) => setTimeout(resolve, 2000)),
   ]).then(([moduleExports]) => moduleExports)
 )
@@ -20,7 +20,7 @@ const App = () => {
 
   const [styles, changeStyle] = React.useState({
     name: storage.name || "Sleek",
-    imgKey: storage.imgKey || 0,
+    imgKey: parseInt(storage.imgKey) || 0,
     mainColor: storage.mainColor || "#212123",
     secondaryColor: storage.secondaryColor || "#585b60",
     textColor: storage.textColor || "#eceff5",

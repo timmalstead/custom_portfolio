@@ -1,7 +1,7 @@
 import React from "react"
 import TechIcons from "./techIcons"
 import * as Style from "./style"
-import Context from "../ThemeContext"
+import Context from "../../ThemeContext"
 
 const Tools = () => {
   const { secondaryColor, contrastOne } = React.useContext(Context).styles

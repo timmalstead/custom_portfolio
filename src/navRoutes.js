@@ -1,7 +1,7 @@
 import React from "react"
-import About from "./About"
-import Projects from "./Projects"
-import Tools from "./Techs"
+import About from "./components/About"
+import Projects from "./components/Projects"
+import Tools from "./components/Techs"
 
 // prettier-ignore
 const NavRoutes = [

@@ -4,16 +4,10 @@ import themes from "./themes"
 import { PhotoshopPicker } from "react-color"
 import Context from "../../ThemeContext"
 
-console.table(themes)
-
 const ThemeSelector = () => {
   const { styles, changeStyle } = React.useContext(Context)
 
-  setTimeout(() => {
-    changeStyle(themes[1])
-  }, 2000)
-
-  const { mainColor, headerSecondary, contrastOne } = styles
+  const { imgKey, mainColor, headerSecondary, contrastOne } = styles
 
   const initialPopUpLocation = window.innerWidth > 850 ? false : true
 
@@ -53,23 +47,56 @@ const ThemeSelector = () => {
     for (const str in styles) {
       if (str !== "imgKey") {
         if (str !== "name") {
+          const nameSplit = str
+            .split(/(?=[A-Z])/)
+            .map((word) => `${word[0].toUpperCase()}${word.substring(1)}`)
+            .join(" ")
           colorArr.push(
-            <Style.ColorHolder
-              key={str}
-              onClick={() =>
-                callColorPicker(str, styles[str], () =>
-                  switchPickerVisible(true)
-                )
-              }
-              style={{
-                borderColor: mainColor,
-                backgroundColor: styles[str],
-              }}
-            />
+            <Style.ColorInfoHolder>
+              <Style.ColorHolder
+                key={str}
+                onClick={() =>
+                  callColorPicker(str, styles[str], () =>
+                    switchPickerVisible(true)
+                  )
+                }
+                style={{
+                  borderColor:
+                    styles[str] === headerSecondary ? mainColor : "transparent",
+                  backgroundColor: styles[str],
+                }}
+              />
+              <Style.ColorInfo>
+                <span>{nameSplit}</span>
+                <span>{styles[str]}</span>
+              </Style.ColorInfo>
+            </Style.ColorInfoHolder>
           )
         } else {
           colorArr.push(
-            <Style.ThemeTitle key={str}>{styles[str]}</Style.ThemeTitle>
+            <Style.ThemeTitle key={str}>
+              <Style.ArrowLeft
+                onClick={() =>
+                  themes[imgKey - 1]
+                    ? changeStyle(themes[imgKey - 1])
+                    : changeStyle(themes[themes.length - 1])
+                }
+                style={{
+                  borderRightColor: contrastOne,
+                }}
+              />
+              <em>{styles[str]}</em>
+              <Style.ArrowRight
+                onClick={() =>
+                  themes[imgKey + 1]
+                    ? changeStyle(themes[imgKey + 1])
+                    : changeStyle(themes[0])
+                }
+                style={{
+                  borderLeftColor: contrastOne,
+                }}
+              />
+            </Style.ThemeTitle>
           )
         }
       }
@@ -77,12 +104,23 @@ const ThemeSelector = () => {
     return colorArr
   }
 
+  const pickerQuotes = [
+    "Color Me Surprised",
+    "Pick A Winner",
+    "Excellent Choice",
+    "Color Is Important, So Are Fonts",
+    "Can You Paint With All The Colors Of The Wind?",
+    "That Looks Great",
+  ]
+
+  const randomNum = Math.floor(Math.random() * pickerQuotes.length)
+
   return (
     <React.Fragment>
       {pickerVisible ? (
         <Style.PickerHolder>
           <PhotoshopPicker
-            header={selectedColor.colorName}
+            header={pickerQuotes[randomNum]}
             color={selectedColor.hex}
             onChange={(e) =>
               selectCurrentColor({ ...selectedColor, hex: e.hex })
@@ -93,7 +131,7 @@ const ThemeSelector = () => {
         </Style.PickerHolder>
       ) : null}
       <Style.PopUp>
-        <section
+        <Style.ArrowUp
           style={{
             borderBottomColor: headerSecondary,
           }}
@@ -109,7 +147,7 @@ const ThemeSelector = () => {
               borderBottom: `.03em solid ${contrastOne}`,
             }}
           >
-            <span>Themes</span>
+            Themes
           </Style.ThemeComponentTitle>
           {themeDisplay()}
         </main>
