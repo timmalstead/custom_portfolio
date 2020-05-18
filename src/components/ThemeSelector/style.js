@@ -65,7 +65,7 @@ const ThemeComponentTitle = styled.span`
 `
 
 const ThemeTitle = styled.div`
-  min-width: 60%;
+  min-width: 70%;
   font-size: 1.2em;
   margin: 0.4em 0;
   display: flex;

@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from "../../logo"
+import Logo from "../Loader/logo"
 import Links from "../Links"
 import ThemeGear from "../ThemeGear"
 import { Link } from "react-router-dom"

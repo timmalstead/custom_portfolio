@@ -4,7 +4,12 @@ import * as Style from "./style"
 import Context from "../../ThemeContext"
 
 const Tools = () => {
-  const { secondaryColor, contrastOne } = React.useContext(Context).styles
+  const {
+    mainColor,
+    secondaryColor,
+    textColor,
+    contrastOne,
+  } = React.useContext(Context).styles
 
   const [hovering, changeHover] = React.useState(
     TechIcons.reduce((object, icon) => {
@@ -53,6 +58,10 @@ const Tools = () => {
               style={{
                 backgroundColor: secondaryColor,
                 left: popUpReversed ? "-11em" : 0,
+                border:
+                  mainColor === secondaryColor
+                    ? `.07em solid ${textColor}`
+                    : null,
               }}
             >
               <p>{icon.info}</p>

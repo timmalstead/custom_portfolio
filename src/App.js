@@ -27,6 +27,7 @@ const App = () => {
     headerColor: storage.headerColor || "#212123",
     headerSecondary: storage.headerSecondary || "#585b60",
     headerText: storage.headerText || "#eceff5",
+    selector: storage.selector || "#585b60",
     contrastOne: storage.constrastOne || "#d7d950",
     contrastTwo: storage.contrastTwo || "#68c2c8",
   })

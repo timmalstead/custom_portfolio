@@ -7,7 +7,14 @@ import Context from "../../ThemeContext"
 const ThemeSelector = () => {
   const { styles, changeStyle } = React.useContext(Context)
 
-  const { imgKey, mainColor, headerSecondary, contrastOne } = styles
+  const {
+    imgKey,
+    mainColor,
+    headerSecondary,
+    selector,
+    contrastOne,
+    contrastTwo,
+  } = styles
 
   const initialPopUpLocation = window.innerWidth > 850 ? false : true
 
@@ -52,9 +59,8 @@ const ThemeSelector = () => {
             .map((word) => `${word[0].toUpperCase()}${word.substring(1)}`)
             .join(" ")
           colorArr.push(
-            <Style.ColorInfoHolder>
+            <Style.ColorInfoHolder key={str}>
               <Style.ColorHolder
-                key={str}
                 onClick={() =>
                   callColorPicker(str, styles[str], () =>
                     switchPickerVisible(true)
@@ -62,7 +68,7 @@ const ThemeSelector = () => {
                 }
                 style={{
                   borderColor:
-                    styles[str] === headerSecondary ? mainColor : "transparent",
+                    styles[str] === selector ? contrastTwo : "transparent",
                   backgroundColor: styles[str],
                 }}
               />
@@ -104,23 +110,11 @@ const ThemeSelector = () => {
     return colorArr
   }
 
-  const pickerQuotes = [
-    "Color Me Surprised",
-    "Pick A Winner",
-    "Excellent Choice",
-    "Color Is Important, So Are Fonts",
-    "Can You Paint With All The Colors Of The Wind?",
-    "That Looks Great",
-  ]
-
-  const randomNum = Math.floor(Math.random() * pickerQuotes.length)
-
   return (
     <React.Fragment>
       {pickerVisible ? (
         <Style.PickerHolder>
           <PhotoshopPicker
-            header={pickerQuotes[randomNum]}
             color={selectedColor.hex}
             onChange={(e) =>
               selectCurrentColor({ ...selectedColor, hex: e.hex })
@@ -133,13 +127,15 @@ const ThemeSelector = () => {
       <Style.PopUp>
         <Style.ArrowUp
           style={{
-            borderBottomColor: headerSecondary,
+            borderBottomColor: selector,
           }}
         />
         <main
           style={{
-            backgroundColor: headerSecondary,
+            backgroundColor: selector,
             right: popUpLocation ? ".5em" : "12em",
+            border:
+              mainColor === selector ? `.07em solid ${headerSecondary}` : null,
           }}
         >
           <Style.ThemeComponentTitle

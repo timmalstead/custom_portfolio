@@ -14,6 +14,7 @@ const Splash = () => {
     mainColor,
     secondaryColor,
     textColor,
+    contrastOne,
     contrastTwo,
   } = React.useContext(Context).styles
 
@@ -105,9 +106,9 @@ const Splash = () => {
               key={route.key}
               to={route.path}
               style={{
-                color: hoverEffects[route.key] ? secondaryColor : textColor,
+                color: hoverEffects[route.key] ? contrastTwo : textColor,
                 borderBottom: hoverEffects[route.key]
-                  ? `.25em solid ${contrastTwo}`
+                  ? `.25em solid ${contrastOne}`
                   : ".1em solid transparent",
               }}
               onMouseOver={() =>
