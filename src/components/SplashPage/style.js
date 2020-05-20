@@ -44,7 +44,7 @@ const Name = styled.span`
 
 const TypeEffect = styled(Name)`
   :after {
-    content: "Full Stack Developer and UI Designer";
+    content: "Full Stack Developer and Designer";
     animation: type 2s ease-in-out;
   }
 
@@ -130,51 +130,51 @@ const TypeEffect = styled(Name)`
     }
 
     67% {
-      content: "Full Stack Developer and|";
+      content: "Full Stack Developer a|";
     }
 
     70% {
-      content: "Full Stack Developer and U|";
+      content: "Full Stack Developer an|";
     }
 
     73% {
-      content: "Full Stack Developer and UI|";
+      content: "Full Stack Developer and|";
     }
 
     76% {
-      content: "Full Stack Developer and UI |";
+      content: "Full Stack Developer and |";
     }
 
     79% {
-      content: "Full Stack Developer and UI D|";
+      content: "Full Stack Developer and D|";
     }
 
     82% {
-      content: "Full Stack Developer and UI De|";
+      content: "Full Stack Developer and De|";
     }
 
     85% {
-      content: "Full Stack Developer and UI Des|";
+      content: "Full Stack Developer and Des|";
     }
 
     88% {
-      content: "Full Stack Developer and UI Desi|";
+      content: "Full Stack Developer and Desi|";
     }
 
     91% {
-      content: "Full Stack Developer and UI Desig|";
+      content: "Full Stack Developer and Desig|";
     }
 
     94% {
-      content: "Full Stack Developer and UI Design|";
+      content: "Full Stack Developer and Design|";
     }
 
     97% {
-      content: "Full Stack Developer and UI Designe|";
+      content: "Full Stack Developer and Designe|";
     }
 
     100% {
-      content: "Full Stack Developer and UI Designer|";
+      content: "Full Stack Developer and Designer|";
     }
   }
 `
