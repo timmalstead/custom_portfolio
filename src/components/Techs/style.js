@@ -11,6 +11,7 @@ const TechHolder = styled.div`
 
 const IconHolder = styled.div`
   position: relative;
+  z-index: -1;
   margin: 0.5em;
   width: 8em;
   height: 8em;
