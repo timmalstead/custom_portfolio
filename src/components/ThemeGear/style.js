@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 const GearHolder = styled.div`
   grid-area: themes;
-  position: relative;
   height: 2.5em;
   width: 2.5em;
 

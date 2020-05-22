@@ -64,6 +64,19 @@ const themes = [
     contrastOne: "#64565b",
     contrastTwo: "#64565b",
   },
+  {
+    name: "Boutique",
+    imgKey: 5,
+    mainColor: "#2f416c",
+    secondaryColor: "#111b59",
+    textColor: "#ffc2c2",
+    headerColor: "#fffff6",
+    headerSecondary: "#ffc2c2",
+    headerText: "#ffc2c2",
+    selector: "#fffff6",
+    contrastOne: "#ffb220",
+    contrastTwo: "#f4c2ff",
+  },
 ]
 
 export default themes

@@ -82,10 +82,7 @@ const ThemeSelector = () => {
               <Style.ColorHolder
                 onClick={() =>
                   callColorPicker(str, styles[str], () =>
-                    /* switchPickerVisible(true) */
-                    console.log(
-                      "This is where the picker visibility callback will be called"
-                    )
+                    switchPickerVisible(true)
                   )
                 }
                 style={{
