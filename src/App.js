@@ -48,7 +48,7 @@ const App = () => {
       margin:0;
       overflow-x:hidden;
       overflow-y:scroll;
-      min-height:48em;
+      min-height:50em;
       width: 100vw;
       background-color: ${styles.mainColor};
       color: ${styles.textColor};
