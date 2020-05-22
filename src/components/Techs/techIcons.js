@@ -2554,7 +2554,7 @@ const TechIcons = [
   {
     name: "Scrum",
     info:
-      "Scrum is a project management that emphasizes clear, consistent communication and frequent deliverables.",
+      "Scrum is a project management style that emphasizes clear, consistent communication and frequent deliverables.",
     url: "https://www.scrum.org/",
     path: (
       <g>
