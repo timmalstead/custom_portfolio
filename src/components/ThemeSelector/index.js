@@ -8,6 +8,7 @@ const ThemeSelector = () => {
   const { styles, changeStyle } = React.useContext(Context)
 
   const {
+    name,
     imgKey,
     mainColor,
     headerSecondary,
@@ -67,6 +68,12 @@ const ThemeSelector = () => {
       storage[prop] = styles[prop]
     }
   }, [styles])
+
+  React.useEffect(() => {
+    const favicon = document.getElementById("favicon")
+
+    favicon.href = `./${name}.ico`
+  }, [name])
 
   const themeDisplay = () => {
     const colorArr = []

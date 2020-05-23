@@ -32,6 +32,12 @@ const App = () => {
     contrastTwo: storage.contrastTwo || "#68c2c8",
   })
 
+  React.useEffect(() => {
+    const favicon = document.getElementById("favicon")
+
+    favicon.href = `./${styles.name}.ico`
+  })
+
   const [headerBorder, changeHeaderBorder] = React.useState(true)
   const [borderBounce, toggleBorderBounce] = React.useState(true)
 

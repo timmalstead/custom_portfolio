@@ -52,7 +52,7 @@ const themes = [
     contrastTwo: "#ffffff",
   },
   {
-    name: "Beast Mode",
+    name: "Beast_Mode",
     imgKey: 4,
     mainColor: "#f0f2f1",
     secondaryColor: "#ff4848",
