@@ -3,7 +3,7 @@ import styled from "styled-components"
 const Header = styled.header`
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   height: 3.5em;
   display: grid;
   grid-template-columns: 3% min-content 1% min-content auto min-content 3% min-content 3%;

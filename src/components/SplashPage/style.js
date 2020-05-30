@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const SplashHolder = styled.div`
   width: 100%;
-  min-height: inherit;
+  min-height: 90vh;
   display: flex;
 
   @media (max-width: 900px) {
@@ -210,7 +210,7 @@ const RouteHolder = styled.div`
   width: 95%;
   display: inherit;
   align-items: center;
-  font-size: 9vw;
+  font-size: Min(8em, 9vw);
 
   @media (max-width: 900px) {
     font-size: 15vw;
