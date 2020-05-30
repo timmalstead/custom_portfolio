@@ -20,6 +20,20 @@ const Animation = styled.div`
     }
   }
 
+  @media (min-width: 1500px) {
+    svg {
+      width: 6em;
+      height: 6em;
+    }
+  }
+
+  @media (min-width: 2500px) {
+    svg {
+      width: 12em;
+      height: 12em;
+    }
+  }
+
   @keyframes twirl {
     0% {
       transform: rotate3d(0, 1, 0, -270deg) skewX(45deg);
