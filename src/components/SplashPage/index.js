@@ -42,10 +42,17 @@ const Splash = () => {
       case "Tools":
         const iconCopy = [...TechIcons]
         const iconBundle = []
-        const screenDivisor =
-          window.innerWidth >= 1000
+        let screenDivisor =
+          window.innerWidth >= 3000
+            ? Math.floor(window.innerWidth / 625)
+            : window.innerWidth >= 2200
+            ? Math.floor(window.innerWidth / 400)
+            : window.innerWidth >= 1500
+            ? Math.floor(window.innerWidth / 300)
+            : window.innerWidth >= 1000
             ? Math.floor(window.innerWidth / 250)
             : Math.ceil(window.innerWidth / 250)
+        if (screenDivisor > TechIcons.length) screenDivisor = TechIcons.length
         for (let i = 0; i < screenDivisor; i++) {
           const randomNum = Math.floor(Math.random() * iconCopy.length)
           iconBundle.push(iconCopy[randomNum])

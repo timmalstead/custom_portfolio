@@ -12,7 +12,7 @@ const SplashHolder = styled.div`
 
 const ImageHolder = styled.div`
   width: 35%;
-  height: 42em;
+  height: 85vh;
   padding: 2em 1em 1em 1em;
   display: inherit;
   flex-direction: column;
@@ -39,6 +39,14 @@ const Name = styled.span`
 
   @media (max-width: 550px) {
     font-size: 5.25vw;
+  }
+
+  @media (min-width: 1500px) {
+    font-size: 2vw;
+  }
+
+  @media (min-width: 2500px) {
+    font-size: 2.5vw;
   }
 `
 
@@ -186,11 +194,15 @@ const MadeWithLove = styled.span`
   @media (max-width: 700px) {
     visibility: hidden;
   }
+
+  @media (min-width: 1500px) {
+    font-size: 1.1vw;
+  }
 `
 
 const ProjectLinksHolder = styled.div`
   width: 65%;
-  height: 42em;
+  /* height: 42em; */
   display: inherit;
   flex-direction: column;
   justify-content: space-around;
@@ -218,6 +230,10 @@ const RouteHolder = styled.div`
 
   @media (max-width: 550px) {
     font-size: 18vw;
+  }
+
+  @media (min-width: 1500px) {
+    font-size: 9vw;
   }
 
   a {
