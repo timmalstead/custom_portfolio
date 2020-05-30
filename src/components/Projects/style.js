@@ -25,6 +25,11 @@ const ImageHolder = styled.div`
   @media (max-width: 850px) {
     width: 100%;
   }
+
+  @media (min-width: 2880px) {
+    width: max-content;
+    height: 34em;
+  }
 `
 
 const Image = styled.img`
@@ -42,6 +47,10 @@ const InfoHolder = styled.div`
 
   @media (max-width: 850px) {
     margin: 0 0 3em 0;
+  }
+
+  @media (min-width: 2000px) {
+    font-size: 0.9vw;
   }
 `
 
