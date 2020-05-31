@@ -20,8 +20,10 @@ const Tools = () => {
 
   const [popUpReversed, popUpDirectionSwitcher] = React.useState(false)
 
+  //more calculations below depending on what the window width is
   const mouseOver = (e, iconName) =>
-    window.innerWidth - e.target.getBoundingClientRect().x <= 250 &&
+    window.innerWidth - e.target.getBoundingClientRect().x <=
+      window.innerWidth / 6 &&
     e.target.tagName !== "SPAN" &&
     window.innerWidth >= 550
       ? (changeHover({ ...hovering, [iconName]: true }),
@@ -57,7 +59,7 @@ const Tools = () => {
             <article
               style={{
                 backgroundColor: secondaryColor,
-                left: popUpReversed ? "-11em" : 0,
+                left: popUpReversed ? `-${window.innerWidth / 350}em` : 0,
                 border:
                   mainColor === secondaryColor
                     ? `.07em solid ${textColor}`

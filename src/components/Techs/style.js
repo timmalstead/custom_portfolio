@@ -26,15 +26,6 @@ const IconHolder = styled.div`
     z-index: -1;
   }
 
-  @media (min-width: 2000px) {
-    width: 12em;
-    height: 12em;
-
-    svg {
-      width: 25vw;
-    }
-  }
-
   @media (max-width: 800px) {
     width: 5em;
     height: 6em;
@@ -42,6 +33,33 @@ const IconHolder = styled.div`
 
   @media (max-width: 515px) {
     width: 4em;
+  }
+
+  @media (min-width: 1900px) {
+    width: 11em;
+    height: 11em;
+
+    svg {
+      width: 28vw;
+    }
+  }
+
+  @media (min-width: 2400px) {
+    width: 13em;
+    height: 13em;
+
+    svg {
+      width: 30vw;
+    }
+  }
+
+  @media (min-width: 3000px) {
+    width: 22em;
+    height: 22em;
+
+    svg {
+      width: 35vw;
+    }
   }
 `
 
@@ -87,6 +105,19 @@ const PopUp = styled.div`
   @media (max-width: 800px) {
     top: 3.5em;
     left: 0.5em;
+  }
+
+  @media (min-width: 1900px) {
+    font-size: 1.2vw;
+    article {
+      width: 15vw;
+    }
+  }
+
+  @media (min-width: 2300px) {
+    article {
+      width: 18vw;
+    }
   }
 `
 
