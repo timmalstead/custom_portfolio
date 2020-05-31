@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 const AboutHolder = styled.div`
+  min-height: 90vh;
   margin: 1.5em 0 0 0;
   width: 100%;
   display: grid;
@@ -23,7 +24,7 @@ const AboutHolder = styled.div`
 `
 const Profile = styled.img`
   grid-area: profile;
-  width: 25em;
+  width: 25vw;
   border-radius: 50%;
 
   :active {
@@ -48,7 +49,7 @@ const Blurb = styled.article`
   justify-content: center;
 
   h1 {
-    font-size: 2em;
+    font-size: Max(2em, 2vw);
     margin-bottom: 0.2em;
   }
 
@@ -65,7 +66,7 @@ const Blurb = styled.article`
   p {
     margin: 0.5em 0 0.25em 0;
     font-family: "EB Garamond", serif;
-    font-size: 1.1em;
+    font-size: Max(1.1em, 1.1vw);
   }
 
   @media (max-width: 800px) {
