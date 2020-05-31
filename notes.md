@@ -8,6 +8,7 @@
 
 //dynamic favicons
 //svgs for routes
+//different pic for greyscale?
 //break into smaller components?
 
 //change header to look better on 4k

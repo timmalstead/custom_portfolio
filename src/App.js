@@ -30,6 +30,7 @@ const App = () => {
     selector: storage.selector || "#585b60",
     contrastOne: storage.contrastOne || "#d7d950",
     contrastTwo: storage.contrastTwo || "#68c2c8",
+    blendMode: storage.blendMode || "normal",
   })
 
   React.useEffect(() => {

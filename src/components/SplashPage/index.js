@@ -16,6 +16,7 @@ const Splash = () => {
     textColor,
     contrastOne,
     contrastTwo,
+    blendMode,
   } = React.useContext(Context).styles
 
   const [hoverEffects, changeHoverEffects] = React.useState(
@@ -94,9 +95,11 @@ const Splash = () => {
               borderBottom: `.09em solid ${secondaryColor}`,
             }}
           >
-            <Style.Name>Timothy Malstead</Style.Name>
+            <Style.Name style={{ mixBlendMode: blendMode }}>
+              Timothy Malstead
+            </Style.Name>
           </Style.NameHolder>
-          <Style.TypeEffect />
+          <Style.TypeEffect style={{ mixBlendMode: blendMode }} />
         </div>
         <Style.MadeWithLove>
           Made with{" "}

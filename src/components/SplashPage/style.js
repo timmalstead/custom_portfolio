@@ -26,6 +26,10 @@ const ImageHolder = styled.div`
   @media (max-width: 550px) {
     height: 9em;
   }
+
+  @media (min-width: 2000px) {
+    background-size: cover;
+  }
 `
 
 const NameHolder = styled.div`
@@ -46,7 +50,7 @@ const Name = styled.span`
   }
 
   @media (min-width: 2500px) {
-    font-size: 2.5vw;
+    font-size: 2.1vw;
   }
 `
 
