@@ -37,10 +37,10 @@ const ThemeSelector = () => {
     return () => window.removeEventListener("resize", adjustPopUp)
   })
 
-  const callColorPicker = (colorTitle, color, setPickerVisibility) => {
-    selectCurrentColor({ colorName: colorTitle, hex: color })
-    setPickerVisibility()
-  }
+  // const callColorPicker = (colorTitle, color, setPickerVisibility) => {
+  //   selectCurrentColor({ colorName: colorTitle, hex: color })
+  //   setPickerVisibility()
+  // }
 
   const setColor = (setPickerVisibility) => {
     changeStyle({
@@ -78,7 +78,7 @@ const ThemeSelector = () => {
   const themeDisplay = () => {
     const colorArr = []
     for (const str in styles) {
-      if (str !== "imgKey") {
+      if (str !== "imgKey" && str !== "blendMode") {
         if (str !== "name") {
           const nameSplit = str
             .split(/(?=[A-Z])/)
@@ -87,10 +87,14 @@ const ThemeSelector = () => {
           colorArr.push(
             <Style.ColorInfoHolder key={str}>
               <Style.ColorHolder
-                onClick={() =>
-                  callColorPicker(str, styles[str], () =>
+                onClick={
+                  () =>
+                    console.log(
+                      "this is where the color picker is called when not commented out"
+                    )
+                  /* callColorPicker(str, styles[str], () =>
                     switchPickerVisible(true)
-                  )
+                  ) */
                 }
                 style={{
                   borderColor:
