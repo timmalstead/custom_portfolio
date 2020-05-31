@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Nav = styled.nav`
   width: 100%;
-  height: 1.5em;
+  height: 2em;
   display: flex;
   position: fixed;
   /* z-index: 1; */
@@ -13,11 +13,11 @@ const Nav = styled.nav`
 
   > * {
     font-style: italic;
-    font-size: 1.1em;
+    font-size: 1.3em;
     text-decoration: none;
 
     @media (max-width: 550px) {
-      font-size: 0.9em;
+      font-size: 1.1em;
     }
   }
 

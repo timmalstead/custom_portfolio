@@ -57,6 +57,13 @@ const PopUp = styled.div`
     align-items: center;
     text-align: center;
   }
+
+  @media (min-height: 2000px) {
+    main {
+      transform: scale(2);
+      transform-origin: right top 0;
+    }
+  }
 `
 
 const ThemeComponentTitle = styled.span`
