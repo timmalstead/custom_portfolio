@@ -18,7 +18,7 @@ const themes = [
     imgKey: 1,
     mainColor: "#bebebe",
     secondaryColor: "#7b7b7b",
-    textColor: "#6f6f6f",
+    textColor: "#4b4b4b",
     headerColor: "#262626",
     headerSecondary: "#ffffff",
     headerText: "#ffffff",
