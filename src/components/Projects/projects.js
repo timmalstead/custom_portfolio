@@ -17,7 +17,7 @@ const folioProjects = [
     title: "Food Oasis Los Angeles",
     fullImage: fola,
     mobileImage: folaMobile,
-    link: "https://food-oasis.herokuapp.com/",
+    link: "https://foodoasis.la/",
     github: "https://github.com/hackforla/food-oasis",
     role: "Front End Developer",
     description:
