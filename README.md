@@ -1,4 +1,4 @@
-## Timohty Malstead's Software Portfolio
+## Timothy Malstead's Software Portfolio
 
 --
 
