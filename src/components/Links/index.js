@@ -39,6 +39,7 @@ const Links = () => {
           <Style.Icon>
             <svg
               viewBox={link.viewBox}
+              fill-rule="evenodd"
               style={{
                 fill: hovering[link.key] ? contrastOne : headerText,
               }}

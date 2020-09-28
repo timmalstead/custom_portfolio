@@ -33,6 +33,26 @@ const mobileIcons = [
     ),
   },
   {
+    key: "Medium",
+    url: "https://medium.com/@timmalstead",
+    viewBox: "0 0 37 37",
+    path: (
+      <g>
+        <defs>
+          <clipPath id="A">
+            <circle cx="17.6574" cy="17.6574" stroke="none" r="17.4803" />
+          </clipPath>
+        </defs>
+        <path
+          d="M0 0h35.1377v35.1377H0zm8.385 11.7515a.914.914 0 0 0-.2975-.7712L5.8836 8.325v-.3966h6.8435l5.2897 11.6 4.6506-11.6h6.524v.3966L27.307 10.132a.551.551 0 0 0-.2094.5289v13.2756c-.0337.2014.047.405.2094.5288l1.8404 1.8068v.3966h-9.257v-.3966l1.9065-1.851c.1873-.1873.1873-.2423.1873-.5288V13.1616l-5.3007 13.463h-.7163l-6.1714-13.463v9.023a1.245 1.245 0 0 0 .3417 1.0356l2.4795 3.0077v.3966H5.586v-.3966l2.4796-3.0077a1.201 1.201 0 0 0 .3195-1.0356V11.7515z"
+          stroke="none"
+          transform="translate(.8229 .8229)"
+          clip-path="url(#A)"
+        />
+      </g>
+    ),
+  },
+  {
     key: "Resume",
     url:
       "https://drive.google.com/file/d/1udWPDtY15T0fssbQtD3Y9_iRZrhCpoL8/view",
