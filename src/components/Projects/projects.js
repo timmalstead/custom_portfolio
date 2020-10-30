@@ -1,6 +1,6 @@
 import fola from "./fola.png"
 import folaMobile from "./folaMobile.png"
-import FPCHackathon from "./FPCHackathon.png"
+// import FPCHackathon from "./FPCHackathon.png"
 import homeUniteUs from "./homeUniteUs.png"
 import portfolio from "./portfolio.png"
 import sirvy from "./sirvy.png"
@@ -24,17 +24,17 @@ const folioProjects = [
       "Find Food Pantries, Food Banks and Meal Programs in Los Angeles County. Food For All!",
     center: true,
   },
-  {
-    title: "LAFPC Dashboard",
-    fullImage: FPCHackathon,
-    mobileImage: false,
-    link: "https://lafpc-hackathon-dashboard.herokuapp.com/",
-    github: "https://github.com/timmalstead/LAFPC_Hackathon_Final_Deployed",
-    role: "Full Stack Developer",
-    description:
-      "Winner of first prize and audience favorite at the Los Angeles Food Policy Council x General Assembly hackathon, LAFPC dashboard is an easy way to view, manage and visualize facts about food policy in Los Angeles County.",
-    center: false,
-  },
+  // {
+  //   title: "LAFPC Dashboard",
+  //   fullImage: FPCHackathon,
+  //   mobileImage: false,
+  //   link: "https://lafpc-hackathon-dashboard.herokuapp.com/",
+  //   github: "https://github.com/timmalstead/LAFPC_Hackathon_Final_Deployed",
+  //   role: "Full Stack Developer",
+  //   description:
+  //     "Winner of first prize and audience favorite at the Los Angeles Food Policy Council x General Assembly hackathon, LAFPC dashboard is an easy way to view, manage and visualize facts about food policy in Los Angeles County.",
+  //   center: false,
+  // },
   {
     title: "Home Unite Us",
     fullImage: homeUniteUs,
