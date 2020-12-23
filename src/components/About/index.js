@@ -4,18 +4,12 @@ import Context from "../../ThemeContext"
 import ProfilePic from "./profilePic.jpg"
 
 const parOne = `
-  I am a Full Stack Software Developer and UI Designer
-  with extensive experience in React and Node.js seeking 
-  to help make this world a more beautiful and
-  lively place. I focus on creating intuitive, elegant and visually
-  pleasing software that simplifies the life of the end user.
+  I am a full stack software engineer and designer seeking to help make the world a more just and equitable place through the use of beautiful, intuitive and helpful software. My goal is to create software that helps solve tough problems for real people. I approach each project with a careful eye toward design, ease of use and performance.
 `
 
 const parTwo = `
-  My technical acumen, combined with my creative and artistic
-  history make me a unique and valuable team member on any project,
-  large or small. I hope you'll take a look at my work and reach out.
-  Together we can make something wonderful.
+  I hope you'll take a look at my work and reach out.
+  Together we can make something that matters.
 `
 
 const About = () => {
@@ -40,7 +34,8 @@ const About = () => {
       />
       <Style.Blurb>
         <h1>
-          Let's Make Something <em style={{ color: contrastTwo }}>Wonderful</em>
+          Let's Make Something That
+          <em style={{ color: contrastTwo }}> Matters</em>
         </h1>
         <span
           style={{

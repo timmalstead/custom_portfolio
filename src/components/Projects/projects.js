@@ -11,8 +11,21 @@ import bagOfHolding from "./bagOfHolding.png"
 // import bulletinBoredMobile from "./bulletinBoredMobile.png"
 import nightIn from "./nightIn.png"
 // import flashLights from "./flashLights.png"
+import sbreentry from "./sbreentry.png"
+import sbreentryMobile from "./sbreentry-mobile.png"
 
 const folioProjects = [
+  {
+    title: "Santa Barbara Reentry",
+    fullImage: sbreentry,
+    mobileImage: sbreentryMobile,
+    link: "https://santabarbarareentry.netlify.app/",
+    github: "https://github.com/codeforamerica/sb_reentry_app",
+    role: "Software Engineer",
+    description:
+      "Currently In Progress: Santa Barbara Reentry is an app to help justice impacted residents of Santa Barbara County more easily access public resources after a jail or prison stay.",
+    center: true,
+  },
   {
     title: "Food Oasis Los Angeles",
     fullImage: fola,
