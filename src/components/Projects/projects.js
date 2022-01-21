@@ -1,30 +1,43 @@
-import fola from "./fola.png"
-import folaMobile from "./folaMobile.png"
+import fola from "./fola.png";
+import folaMobile from "./folaMobile.png";
 // import FPCHackathon from "./FPCHackathon.png"
-import homeUniteUs from "./homeUniteUs.png"
-import portfolio from "./portfolio.png"
-import sirvy from "./sirvy.png"
+import homeUniteUs from "./homeUniteUs.png";
+import portfolio from "./portfolio.png";
+import sirvy from "./sirvy.png";
 // import columnGenerator from "./columnGenerator.png"
 // import columnGeneratorMobile from "./columnGeneratorMobile.png"
-import bagOfHolding from "./bagOfHolding.png"
+import bagOfHolding from "./bagOfHolding.png";
 // import bulletinBored from "./bulletinBored.png"
 // import bulletinBoredMobile from "./bulletinBoredMobile.png"
-import nightIn from "./nightIn.png"
+import nightIn from "./nightIn.png";
 // import flashLights from "./flashLights.png"
-import sbreentry from "./sbreentry.png"
-import sbreentryMobile from "./sbreentry-mobile.png"
+// import sbreentry from "./sbreentry.png"
+// import sbreentryMobile from "./sbreentry-mobile.png"
+import thrivesbc from "./thrivesbc.png";
+import thrivesbcMobile from "./thrivesbc-mobile.png";
 
 const folioProjects = [
+  // {
+  //   title: "Santa Barbara Reentry",
+  //   fullImage: sbreentry,
+  //   mobileImage: sbreentryMobile,
+  //   link: "https://santabarbarareentry.netlify.app/",
+  //   github: "https://github.com/codeforamerica/sb_reentry_app",
+  //   role: "Software Engineer",
+  //   description:
+  //     "Currently In Progress: Santa Barbara Reentry is an app to help justice impacted residents of Santa Barbara County more easily access public resources after a jail or prison stay.",
+  //   center: true,
+  // },
   {
-    title: "Santa Barbara Reentry",
-    fullImage: sbreentry,
-    mobileImage: sbreentryMobile,
-    link: "https://santabarbarareentry.netlify.app/",
-    github: "https://github.com/codeforamerica/sb_reentry_app",
-    role: "Software Engineer",
+    title: "ThriveSBC",
+    fullImage: thrivesbc,
+    mobileImage: thrivesbcMobile,
+    link: "https://www.thrivesbc.com/",
+    github: "https://github.com/sbpublicdefendersoffice/sb_reentry_app",
+    role: "Software Engineer, Designer and Primary Architect",
     description:
-      "Currently In Progress: Santa Barbara Reentry is an app to help justice impacted residents of Santa Barbara County more easily access public resources after a jail or prison stay.",
-    center: true,
+      "ThriveSBC is an app to help all residents of Santa Barbara who identify as justice impacted more easily access public and other helpful resources.",
+    center: false,
   },
   {
     title: "Food Oasis Los Angeles",
@@ -136,6 +149,6 @@ const folioProjects = [
   //     "A fun and colorful browser based game that tests your ability to remember sequences of colors.",
   //   center: true,
   // },
-]
+];
 
-export default folioProjects
+export default folioProjects;
